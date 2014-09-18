@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="lib/img/favicon.ico">
+
+    <title>SoraMame Block Editor</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="lib/css/flat-ui.min.css" rel="stylesheet">
+    <link href="lib/css/navbar-fixed-top.css" rel="stylesheet">
+    <link href="lib/css/jquery-sortable.css" rel="stylesheet">
+	
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="lib/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="lib/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+
+	<!-- Static navbar -->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+		  <div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+			  <span class="sr-only">Toggle navigation</span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">SoraMame Block Editor</a>
+		  </div>
+		  <div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+			  <li class="active"><a href="#">File</a></li>
+			  <li><a href="#">Edit</a></li>
+			  <li><a href="#">Run</a></li>
+			  <li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools<span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu">
+				  <li><a href="#">Link</a></li>
+				  <li><a href="#">Link</a></li>
+				  <li><a href="#">Link</a></li>
+				  <li class="divider"></li>
+				  <li class="dropdown-header">Nav header</li>
+				  <li><a href="#">Separated link</a></li>
+				  <li><a href="#">One more separated link</a></li>
+				</ul>
+			  </li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			  <li class="active"><a href="./">Help</a></li>
+			</ul>
+		  </div><!--/.nav-collapse -->
+		</div><!--/.container-fluid -->
+	</div>
+
+	<!-- Main component for a primary marketing message or call to action -->
+	<h1>
+		jQuery-Sortable
+    </h1>
+	<p>A flexible, opinionated sorting with nested! plugin for jQuery.<br>
+	<a href="http://johnny.github.io/jquery-sortable/" target="_blank">http://johnny.github.io/jquery-sortable/</a></p>
+	<ol class="block-code">
+	  <li>
+		Tokyo
+		<ol></ol>
+	  </li>
+	  <li>
+		London
+		<ol></ol>
+	  </li>
+	  <li>
+		New-york
+		<ol>
+		  <li>Apple</li>
+		  <li>Orange</li>
+		  <li>
+			Strawberry
+			<ol>
+			  <li>First</li>
+			  <li>Second</li>
+			</ol>
+			<ol>
+			  <li>First</li>
+			  <li>Second</li>
+			</ol>
+		  </li>
+		</ol>
+	  </li>
+	  <li>paris</li>
+	  <li>hanoi</li>
+	  <li>dobai</li>
+	</ol>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="lib/js/ie10-viewport-bug-workaround.js"></script>
+	<script type="text/javascript" src="lib/js/jquery-sortable.js"></script>
+	<script type="text/javascript">$('ol.block-code').sortable();</script>
+  </body>
+</html>
