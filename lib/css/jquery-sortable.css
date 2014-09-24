@@ -9,7 +9,7 @@
 ol.block-code {
 	margin: 0 0 9px 0;
 	min-height: 10px;
-    width: 90%;
+    width: 70%;
 	cursor: move;
 }
 
@@ -31,8 +31,10 @@ ol.block-code li {
 }
 
 ol.block-code li:hover{
-	border: 2px solid #FFFFFF;
-	background-color: #E0E0E0;
+	border: 1px solid #000000;
+	color: #000000;
+	font-weight: bold;
+	background-color: #E5E9EA;
 }
 
 ol.block-code li.placeholder {
