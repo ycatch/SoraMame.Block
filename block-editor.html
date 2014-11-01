@@ -31,70 +31,72 @@
 
   <body>
 
-    <div class="container">
+	<div class="container">
 
-	<!-- Static navbar -->
-	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<div class="container-fluid">
-		  <div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-			  <span class="sr-only">Toggle navigation</span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">SoraMame Block Editor</a>
-		  </div>
-		  <div class="navbar-collapse collapse">
-			<ul class="nav navbar-nav">
-			  <li class="active"><a href="#">File</a></li>
-			  <li><a href="#">Edit</a></li>
-			  <li><a href="#">Run</a></li>
-			  <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools<span class="caret"></span></a>
-				<ul class="dropdown-menu" role="menu">
-				  <li><a href="#">Link</a></li>
-				  <li><a href="#">Link</a></li>
-				  <li><a href="#">Link</a></li>
-				  <li class="divider"></li>
-				  <li class="dropdown-header">Nav header</li>
-				  <li><a href="#">Separated link</a></li>
-				  <li><a href="#">One more separated link</a></li>
+		<!-- Static navbar -->
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+			  <div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">SoraMame Block Editor</a>
+			  </div>
+			  <div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+				  <li class="active"><a href="#">File</a></li>
+				  <li><a href="#">Edit</a></li>
+				  <li><a href="#">Run</a></li>
+				  <li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+					  <li><a href="#">Link</a></li>
+					  <li><a href="#">Link</a></li>
+					  <li><a href="#">Link</a></li>
+					  <li class="divider"></li>
+					  <li class="dropdown-header">Nav header</li>
+					  <li><a href="#">Separated link</a></li>
+					  <li><a href="#">One more separated link</a></li>
+					</ul>
+				  </li>
 				</ul>
-			  </li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-			  <li class="active"><a href="./">Help</a></li>
-			</ul>
-		  </div><!--/.nav-collapse -->
-		</div><!--/.container-fluid -->
-	</div>
+				<ul class="nav navbar-nav navbar-right">
+				  <li class="active"><a href="./">Help</a></li>
+				</ul>
+			  </div><!--/.nav-collapse -->
+			</div><!--/.container-fluid -->
+		</div>
 
-	<!-- Main component for a primary marketing message or call to action -->
-	 <div class="row">
-		<div class="col-md-2">
-		<h4>Pallet</h4>
-			<div id="accordion">
-				<h5>First</h5>
-				<div>
-					<ol class="pallet-code connect-area">
-						<li>Sapporo</li>
-						<li>Yokohama</li>
-						<li>Nagoya</li>
-					</ol>
-				</div>
-				<h5>Second</h5>
-				<div>
-					<ol class="pallet-code connect-area">
-						<li>Osaka</li>
-						<li>Hirosima</li>
-						<li>Fukuoka</li>
-					</ol>
+		<!-- Main component -->
+		<div class="row">
+			<!-- Side code pallet -->
+			<div class="col-md-2">
+				<div class="sidebar-nav affix" role="complementary">
+					<div id="accordion">
+						<h5>Basic</h5>
+						<div>
+							<ol class="pallet-code connect-area">
+								<li>Sapporo</li>
+								<li>Yokohama</li>
+								<li>Nagoya</li>
+							</ol>
+						</div>
+						<h5>Calc</h5>
+						<div>
+							<ol class="pallet-code connect-area">
+								<li>Osaka</li>
+								<li>Hirosima</li>
+								<li>Fukuoka</li>
+							</ol>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="col-md-10">
-		<h4>Edit Area</h4>
+			<!-- Main Edit Area -->
+			<div class="col-md-10">
 				<ol class="block-code connect-area">
 				  <li>
 					Tokyo
