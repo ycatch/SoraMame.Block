@@ -61,3 +61,12 @@ ol.pallet-code li {
 	list-style-type: none;
 }
 
+a.trash {
+	display: block;
+	width: 100px;
+	height:100px;
+	background: url(../img/trash.png) no-repeat 0 0;
+}
+a.trash:hover {
+	background-position: 0 bottom;
+}
