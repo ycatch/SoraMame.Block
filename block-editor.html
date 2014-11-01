@@ -72,12 +72,23 @@
 
 	<!-- Main component for a primary marketing message or call to action -->
 	 <div class="row">
-		<div class="col-md-2">Code Pallet:
+		<div class="col-md-2" id="accordion">Code Pallet:
+			<h3>First</h3>
+			<div>
 			<ol class="pallet-code connect-area">
 				<li>Sapporo</li>
 				<li>Nagoya</li>
 				<li>Osaka</li>
-			<ol>
+			</ol>
+			</div>
+			<h3>Second</h3>
+			<div>
+			<ol class="pallet-code connect-area">
+				<li>Sapporo</li>
+				<li>Nagoya</li>
+				<li>Osaka</li>
+			</ol>
+			</div>
 		</div>
 		<div class="col-md-10">Edit Area:
 				<ol class="block-code connect-area">
@@ -123,7 +134,10 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="lib/js/ie10-viewport-bug-workaround.js"></script>
 	<script type="text/javascript" src="lib/js/jquery-sortable.js"></script>
+	<script src="lib/jquery-ui/jquery-ui.js"></script>
 	<script type="text/javascript">
+	$('#accordion').accordion();
+
 	$('ol.pallet-code').sortable({
 		group: 'connect-area',
 		drop: false,
@@ -140,5 +154,6 @@
 		group: 'connect-area'
 	});
 	</script>
+
   </body>
 </html>
