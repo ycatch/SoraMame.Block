@@ -1,9 +1,9 @@
 /* jquery-sortable css */
 
 .dragged {
-  position: absolute;
-  opacity: 0.5;
-  z-index: 2000;
+	position: absolute;
+	opacity: 0.5;
+	z-index: 2000;
 }
 
 ol.block-code {
@@ -27,7 +27,6 @@ ol.block-code li {
 		  transition: border .25s linear, color .25s linear, background-color .25s linear;
 
 	-webkit-font-smoothing: subpixel-antialiased;
-	color: #48C9B0;
 }
 
 ol.block-code li:hover{
@@ -46,15 +45,19 @@ ol.block-code li.placeholder {
 }
 	
 ol.block-code li.placeholder:before {
-      position: absolute;
-      content: "";
-      width: 0;
-      height: 0;
-      margin-top: -8px;
-      left: -8px;
-      top: -1px;
-      border: 8px solid transparent;
-      border-left-color: red;
-      border-right: none;
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 0;
+	margin-top: -8px;
+	left: -8px;
+	top: -1px;
+	border: 8px solid transparent;
+	border-left-color: red;
+	border-right: none;
+}
+
+ol.pallet-code li {
+	list-style-type: none;
 }
 
