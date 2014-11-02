@@ -171,8 +171,10 @@
 
 			<!-- trash area-->
 			<div class="col-md-2">
-				<div class="sidebar-nav affix" role="complementary">
-					<a class="trash" href="#" onclick="emptyTrash()"></a>
+				<div class="sidebar-nav affix" role="complementary" 
+					data-toggle="tooltip" data-placement="top" title="double-click:clear">
+					<a class="trash" href="#" ondblclick="clearTrash()">
+					</a>
 					<ol id="trash-can" class="trash-code connect-area">
 					</ol>
 				</div>
@@ -189,32 +191,33 @@
     <script src="lib/js/ie10-viewport-bug-workaround.js"></script>
 	<script type="text/javascript" src="lib/js/jquery-sortable.js"></script>
 	<script type="text/javascript">
-	$('ol.pallet-code').sortable({
-		group: 'connect-area',
-		drop: false,
-		onDragStart: function (item, container, _super) {
-			// Duplicate items of the no drop area
-			if(!container.options.drop) {
-				item.clone().insertAfter(item)
+		$('ol.pallet-code').sortable({
+			group: 'connect-area',
+			drop: false,
+			onDragStart: function (item, container, _super) {
+				// Duplicate items of the no drop area
+				if(!container.options.drop) {
+					item.clone().insertAfter(item)
+				}
+				_super(item)
 			}
-			_super(item)
-		}
-	});
+		});
 
-	$('ol.trash-code').sortable({
-		group: 'connect-area',
-	});
+		$('ol.block-code').sortable({
+			group: 'connect-area'
+		});
 
-	$('ol.block-code').sortable({
-		group: 'connect-area'
-	});
-	
-	function emptyTrash(){
-		if(window.confirm("Empty Trash?")) {
-			$("#trash-can").empty();
-		}
-	};
+		$('ol.trash-code').sortable({
+			group: 'connect-area',
+		});
+
 	</script>
-
+	<script type="text/javascript">
+		function clearTrash(){
+			if(window.confirm("Clear trash?")) {
+				$("#trash-can").empty();
+			}
+		};
+	</script>
   </body>
 </html>
