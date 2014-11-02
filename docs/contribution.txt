@@ -5,21 +5,40 @@ Tools, Library & Documents
 thank you all.
 
 
-jquery
---------------
-
 
 jquery-sortable
 --------------
 v0.9.4
 
-This is nested sortable.
-It is not jquery UI sortable.
+This is nested sortable most important parts of SoraMame.
 
-Created by Jonas von Andrian.
+It is not jquery-UI sortable.
+
+jquery-sortable is created by Jonas von Andrian.
 jquery-sortable.js is released under the Modified BSD License.
 
 http://johnny.github.io/jquery-sortable/
+
+
+
+jquery
+--------------
+http://jquery.com/
+
+Copyright 2014 The jQuery Foundation
+
+MIT license
+
+
+
+Bootstrap v3.2.0
+--------------
+
+http://getbootstrap.com
+
+Copyright 2011-2014 Twitter, Inc.
+
+Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
 
 

@@ -1,6 +1,7 @@
-block-editor
-============
+SoraMame block-editor
+======================
 
-This is block like code-editor for tiny script.
+SoraMame is block-type code-editor for tiny script.
 
-It is now working in progress
+It is now working in progress.
+

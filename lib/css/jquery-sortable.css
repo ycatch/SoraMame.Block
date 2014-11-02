@@ -17,11 +17,11 @@ ol.block-code li {
 	cursor: move;
 	display: block;
 	margin: 8px;
-	padding: 10px 15px;
-	font-size: 15px;
+	padding: 4px 15px;
+	font-size: 12px;
 	font-weight: normal;
 	line-height: 1.4;
-	border: 1px solid #5DADE2;
+	border: 1px solid lightgray;
 	border-radius: 4px;
 	-webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
 		  transition: border .25s linear, color .25s linear, background-color .25s linear;
@@ -59,6 +59,11 @@ ol.block-code li.placeholder:before {
 
 ol.pallet-code li {
 	list-style-type: none;
+	font-size: 12px;
+}
+
+.panel-default {
+	margin: 8px
 }
 
 .panel-heading .accordion-toggle:after {
