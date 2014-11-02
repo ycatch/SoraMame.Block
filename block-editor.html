@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="lib/img/favicon.ico">
 
-    <title>SoraMame Block Editor</title>
+    <title>SoraMame</title>
 
     <!-- Bootstrap core CSS -->
     <link href="lib/css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +43,7 @@
 				  <span class="icon-bar"></span>
 				  <span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">SoraMame Block Editor</a>
+				<a class="navbar-brand" href="#">SoraMame</a>
 			  </div>
 			  <div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
@@ -132,11 +132,12 @@
 				</div><!-- panel -->
 			  </div><!-- panel-group -->
 			  <div>
-					<ol class="trash-code connect-area">
-							<li><a class="trash" href="#"></a></li>
+					<ol id="trash-can" class="trash-code connect-area">
 					</ol>
+					<a class="trash" href="#" onclick="emptyTrash()"></a>
 			  </div>
 			</div>
+
 			</div><!-- Side code pallet -->
 			<!-- Main Edit Area -->
 			<div class="col-md-10">
@@ -198,12 +199,22 @@
 
 	$('ol.trash-code').sortable({
 		group: 'connect-area',
-		drag: false
+		drag: false,
+		onDrop: function ($item, container, _super, event) {
+		  $item.removeClass("dragged").removeAttr("style");
+		  $("body").removeClass("dragging");
+		}
 	});
 
 	$('ol.block-code').sortable({
 		group: 'connect-area'
 	});
+	
+	function emptyTrash(){
+		if(window.confirm("Empty Trash?")) {
+			$("#trash-can").empty();
+		}
+	};
 	</script>
 
   </body>
