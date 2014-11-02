@@ -1,5 +1,7 @@
 /* jquery-sortable css */
 
+
+/** Block Edit Area **/
 .dragged {
 	position: absolute;
 	opacity: 0.5;
@@ -57,6 +59,13 @@ ol.block-code li.placeholder:before {
 	border-right: none;
 }
 
+
+/** Code-Pallete **/
+
+ol.pallet-code {
+	padding-left: 0
+}
+
 ol.pallet-code li {
 	list-style-type: none;
 	font-size: 12px;
@@ -80,7 +89,15 @@ ol.pallet-code li {
     color: grey;
 }
 
+
+/** Trash-Can **/
+
+ol.trash-code {
+	padding-left: 10px
+}
+
 ol.trash-code li {
+	font-size: 12px;
 	list-style-type: none;
 }
 
