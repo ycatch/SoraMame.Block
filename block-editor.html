@@ -131,16 +131,11 @@
 				  </div><!-- panel-collapse -->
 				</div><!-- panel -->
 			  </div><!-- panel-group -->
-			  <div>
-					<ol id="trash-can" class="trash-code connect-area">
-					</ol>
-					<a class="trash" href="#" onclick="emptyTrash()"></a>
-			  </div>
 			</div>
 
 			</div><!-- Side code pallet -->
 			<!-- Main Edit Area -->
-			<div class="col-md-10">
+			<div class="col-md-8">
 				<ol class="block-code connect-area">
 				  <li>
 					Tokyo
@@ -173,6 +168,15 @@
 				  <li>Dobai</li>
 				</ol>
 			</div>
+
+			<!-- trash area-->
+			<div class="col-md-2">
+				<div class="sidebar-nav affix" role="complementary">
+					<a class="trash" href="#" onclick="emptyTrash()"></a>
+					<ol id="trash-can" class="trash-code connect-area">
+					</ol>
+				</div>
+			</div>
 		</div>
     </div> <!-- /container -->
 
@@ -199,11 +203,6 @@
 
 	$('ol.trash-code').sortable({
 		group: 'connect-area',
-		drag: false,
-		onDrop: function ($item, container, _super, event) {
-		  $item.removeClass("dragged").removeAttr("style");
-		  $("body").removeClass("dragging");
-		}
 	});
 
 	$('ol.block-code').sortable({

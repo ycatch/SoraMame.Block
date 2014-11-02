@@ -80,8 +80,8 @@ ol.trash-code li {
 
 a.trash {
 	display: block;
-	width: 100px;
-	height:100px;
+	width: 60px;
+	height:60px;
 	background: url(../img/trash-close.png) no-repeat 0 0;
 }
 a.trash:hover {
