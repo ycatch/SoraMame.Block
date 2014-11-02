@@ -74,28 +74,53 @@
 		<div class="row">
 			<!-- Side code pallet -->
 			<div class="col-md-2">
-				<div class="sidebar-nav affix" role="complementary">
-					<div id="accordion">
-						<h5>Basic</h5>
-						<div>
-							<ol class="pallet-code connect-area">
-								<li>Sapporo</li>
-								<li>Yokohama</li>
-								<li>Nagoya</li>
-							</ol>
-						</div>
-						<h5>Calc</h5>
-						<div>
-							<ol class="pallet-code connect-area">
-								<li>Osaka</li>
-								<li>Hirosima</li>
-								<li>Fukuoka</li>
-							</ol>
-						</div>
+			<div class="sidebar-nav affix" role="complementary">
+			  <div class="panel-group" id="accordion2">
+				<div class="panel panel-default">
+				  <a class="list-group-item" data-toggle="collapse" data-parent="#accordion2" href="#collapse21">
+					  Basic
+				  </a>
+				  <div id="collapse21" class="panel-collapse collapse in">
+					<div class="panel-body">
+						<ol class="pallet-code connect-area">
+							<li>Sapporo</li>
+							<li>Yokohama</li>
+							<li>Nagoya</li>
+						</ol>
 					</div>
-					<hr size="3">
-					<p><a class="trash" href="#"></a>
-				</div>
+				  </div><!-- panel-collapse -->
+				</div><!-- panel -->
+				<div class="panel panel-default">
+				  <a class="list-group-item" data-toggle="collapse" data-parent="#accordion2" href="#collapse22">
+					  Logic
+				  </a>
+				  <div id="collapse22" class="panel-collapse collapse">
+					<div class="panel-body">
+						<ol class="pallet-code connect-area">
+							<li>Sapporo</li>
+							<li>Yokohama</li>
+							<li>Nagoya</li>
+						</ol>
+					</div>
+				  </div><!-- panel-collapse -->
+				</div><!-- panel -->
+				<div class="panel panel-default">
+				  <a class="list-group-item" data-toggle="collapse" data-parent="#accordion2" href="#collapse23">
+					  Calc
+				  </a>
+				  <div id="collapse23" class="panel-collapse collapse">
+					<div class="panel-body">
+						<ol class="pallet-code connect-area">
+							<li>Sapporo</li>
+							<li>Yokohama</li>
+							<li>Nagoya</li>
+						</ol>
+					</div>
+				  </div><!-- panel-collapse -->
+				</div><!-- panel -->
+			  </div><!-- panel-group -->
+			  <p><a class="trash" href="#"></a></p>
+			</div>
 			</div>
 			<!-- Main Edit Area -->
 			<div class="col-md-10">
@@ -128,7 +153,7 @@
 				  </li>
 				  <li>Paris</li>
 				  <li>Hanoi</li>
-				  <li>obai</li>
+				  <li>Dobai</li>
 				</ol>
 			</div>
 		</div>
@@ -138,14 +163,11 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="lib/js/jquery-ui.min.js"></script>
     <script src="lib/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="lib/js/ie10-viewport-bug-workaround.js"></script>
 	<script type="text/javascript" src="lib/js/jquery-sortable.js"></script>
 	<script type="text/javascript">
-	$('#accordion').accordion();
-
 	$('ol.pallet-code').sortable({
 		group: 'connect-area',
 		drop: false,
