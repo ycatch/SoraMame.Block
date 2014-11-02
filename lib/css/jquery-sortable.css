@@ -74,6 +74,9 @@ ol.pallet-code li {
     content: "\e080";    /* adjust as needed, taken from bootstrap.css */
 }
 
+ol.trash-code li {
+	list-style-type: none;
+}
 
 a.trash {
 	display: block;

@@ -116,7 +116,7 @@
 				  <div class="panel-heading">
 					<h4 class="panel-title">
 						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse13">
-							Calc
+							Math
 						</a>
 					</h4>
 				  </div>		
@@ -131,9 +131,13 @@
 				  </div><!-- panel-collapse -->
 				</div><!-- panel -->
 			  </div><!-- panel-group -->
-			  <p><a class="trash" href="#"></a></p>
+			  <div>
+					<ol class="trash-code connect-area">
+							<li><a class="trash" href="#"></a></li>
+					</ol>
+			  </div>
 			</div>
-			</div>
+			</div><!-- Side code pallet -->
 			<!-- Main Edit Area -->
 			<div class="col-md-10">
 				<ol class="block-code connect-area">
@@ -190,6 +194,11 @@
 			}
 			_super(item)
 		}
+	});
+
+	$('ol.trash-code').sortable({
+		group: 'connect-area',
+		drag: false
 	});
 
 	$('ol.block-code').sortable({
