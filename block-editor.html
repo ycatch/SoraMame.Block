@@ -137,35 +137,63 @@
 			<!-- Main Edit Area -->
 			<div class="col-md-8">
 				<ol class="block-code connect-area">
-				  <li>
-					Tokyo
-					<ol></ol>
-				  </li>
-				  <li>
-					London
-					<ol></ol>
-				  </li>
-				  <li>
-					New-york
-					<ol>
-					  <li>Apple</li>
-					  <li>Orange</li>
-					  <li>
-						Strawberry
+					<li class="palette-turquoise">
+						var name=INPUT "Name?"
+					</li>
+					<li>
+						var msg = "Hello:" + name + "\n"
+					</li>
+					<li>
+						var i=1
+					</li>
+					<li>
+						WHILE (i <= 15) {
 						<ol>
-						  <li>First</li>
-						  <li>Second</li>
+							<li>
+								IF((i % 3 == 0) && (i % 5 == 0)) {
+								<ol>
+									<li>
+										msg = msg + i + ": FizzBuzz\n"
+									</li>
+								</ol>
+								} 
+							</li>
+							<li>
+								ELSE IF (i % 3 == 0){
+								<ol>
+									<li>
+										msg = msg + i + ": Fizz\n"
+									</li>
+								</ol>
+								}
+							</li>
+							<li>
+								ELSE IF (i % 5 == 0){
+								<ol>
+									<li>
+										msg = msg + i + ": Buzz\n"
+									</li>
+								</ol>
+								}
+							</li>
+							<li>
+								ELSE {
+								<ol>
+									<li>
+										msg = msg + i + "\n" 
+									</li>
+								</ol>
+								}
+							</li>
+							<li>
+								i=i+1
+							</li>
 						</ol>
-						<ol>
-						  <li>First</li>
-						  <li>Second</li>
-						</ol>
-					  </li>
-					</ol>
-				  </li>
-				  <li>Paris</li>
-				  <li>Hanoi</li>
-				  <li>Dobai</li>
+						}
+					</li>
+					<li>
+						PRINT msg
+					</li>
 				</ol>
 			</div>
 
