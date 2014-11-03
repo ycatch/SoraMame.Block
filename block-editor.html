@@ -72,71 +72,100 @@
 
 		<!-- Main component -->
 		<div class="row">
-			<!-- Side code pallet -->
+		
+		<!-- start code pallet -->
 			<div class="col-md-2">
 			<div class="sidebar-nav affix" role="complementary">
 			  <div class="panel-group" id="accordion">
+			
+				<!-- start panel -->
 				<div class="panel panel-default">
 				  <div class="panel-heading">
 					<h4 class="panel-title">
 						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse11">
-							Basic
+							BASIC
 						</a>
 					</h4>
 				  </div>
+				  <!-- panel-collapse -->
 				  <div id="collapse11" class="panel-collapse collapse in">
 					<div class="panel-body">
-						<ol class="pallet-code connect-area">
-							<li>Sapporo</li>
-							<li>Yokohama</li>
-							<li>Nagoya</li>
+						<ol class="pallet-code block connect-area">
+							<li>input</li>
+							<li>print</li>
+							<li>comment</li>
 						</ol>
 					</div>
-				  </div><!-- panel-collapse -->
-				</div><!-- panel -->
+				  </div>
+				</div><!-- end panel -->
+				
+				<!-- start panel -->
 				<div class="panel panel-default">
 				  <div class="panel-heading">
 					<h4 class="panel-title">
 						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse12">
-							Logic
+							IF
 						</a>
 					</h4>
 				  </div>
+				  <!-- panel-collapse -->
 				  <div id="collapse12" class="panel-collapse collapse">
 					<div class="panel-body">
-						<ol class="pallet-code connect-area">
-							<li>Sapporo</li>
-							<li>Yokohama</li>
-							<li>Nagoya</li>
+						<ol class="pallet-code block connect-area">
+							<li>if ()</li>
+							<li>else if ()</li>
+							<li>else</li>
 						</ol>
 					</div>
-				  </div><!-- panel-collapse -->
-				</div><!-- panel -->
+				  </div>
+				</div><!-- end panel -->
+				
+				<!-- start panel -->
 				<div class="panel panel-default">
 				  <div class="panel-heading">
 					<h4 class="panel-title">
 						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse13">
-							Math
+							LOOP
 						</a>
 					</h4>
-				  </div>		
+				  </div>
+				  <!-- panel-collapse -->
+				  <div id="collapse13" class="panel-collapse collapse">
+					<div class="panel-body">
+						<ol class="pallet-code block connect-area">
+							<li>while</li>
+							<li>for</li>
+						</ol>
+					</div>
+				  </div>
+				</div><!-- end panel -->
+				
+				<!-- start panel -->
+				<div class="panel panel-default">
+				  <div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse13">
+							VAR
+						</a>
+					</h4>
+				  </div>
+				  <!-- panel-collapse -->
 				  <div id="collapse13" class="panel-collapse collapse">
 					<div class="panel-body">
 						<ol class="pallet-code connect-area">
-							<li>Sapporo</li>
-							<li>Yokohama</li>
-							<li>Nagoya</li>
+							<li>yokohama</li>
+							<li>shimizu</li>
 						</ol>
 					</div>
-				  </div><!-- panel-collapse -->
-				</div><!-- panel -->
+				  </div>
+				</div><!-- end panel -->
 			  </div><!-- panel-group -->
 			</div>
+			</div><!-- end code pallet -->
 
-			</div><!-- Side code pallet -->
-			<!-- Main Edit Area -->
+		<!-- Main Edit Area -->
 			<div class="col-md-8">
-				<ol class="block-code connect-area">
+				<ol class="block connect-area">
 					<li class="palette-turquoise">
 						var name=INPUT "Name?"
 					</li>
@@ -197,18 +226,20 @@
 				</ol>
 			</div>
 
-			<!-- trash area-->
+		<!-- trash area-->
 			<div class="col-md-2">
 				<div class="sidebar-nav affix" role="complementary" 
 					data-toggle="tooltip" data-placement="top" title="double-click:clear">
 					<a class="trash" href="#" ondblclick="clearTrash()">
 					</a>
-					<ol id="trash-can" class="trash-code connect-area">
+					<ol id="trash-can" class="trash-code block connect-area">
 					</ol>
 				</div>
 			</div>
 		</div>
-    </div> <!-- /container -->
+		<!-- end row -->
+    </div>
+	<!-- /container -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -231,7 +262,7 @@
 			}
 		});
 
-		$('ol.block-code').sortable({
+		$('ol.block').sortable({
 			group: 'connect-area'
 		});
 
