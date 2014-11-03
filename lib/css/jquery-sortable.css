@@ -1,5 +1,4 @@
-/* jquery-sortable css */
-
+/*** SoraMame jquery-sortable css ***/
 
 /** Common Block type **/
 .dragged {
@@ -21,7 +20,7 @@
 	margin: 8px;
 	padding: 4px 15px;
 	font-size: 12px;
-	font-weight: normal;
+	font-weight: bold;
 	line-height: 1.4;
 	border: 1px solid white;
 	border-radius: 4px;
@@ -34,9 +33,9 @@
 .block li:hover{
 	padding: 2px 17px 6px 13px; /* for float effect*/
 	font-weight: bold;
-	box-shadow: 2px 2px 2px 2px lightgray;
-    -webkit-box-shadow: 2px 2px 2px 2px lightgray;
-    -moz-box-shadow: 2px 2px 2px 2px lightgray;
+	box-shadow: 2px 2px 2px 2px gray;
+    -webkit-box-shadow: 2px 2px 2px 2px gray;
+    -moz-box-shadow: 2px 2px 2px 2px gray;
 }
 
 .block li.placeholder {
