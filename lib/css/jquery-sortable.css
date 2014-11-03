@@ -1,7 +1,7 @@
 /* jquery-sortable css */
 
 
-/** Block type **/
+/** Common Block type **/
 .dragged {
 	position: absolute;
 	opacity: 0.5;
@@ -23,7 +23,7 @@
 	font-size: 12px;
 	font-weight: normal;
 	line-height: 1.4;
-	border: 1px solid lightgray;
+	border: 1px solid white;
 	border-radius: 4px;
 	-webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
 		  transition: border .25s linear, color .25s linear, background-color .25s linear;
@@ -32,10 +32,13 @@
 }
 
 .block li:hover{
-	border: 1px solid #000000;
-	color: #000000;
+	/** border: 1px solid gray; **/
+	opacity: 0.8;
+	/** color: #000000; **/
 	font-weight: bold;
-	/* background-color: #E5E9EA; */
+	box-shadow: 1px 1px 1px 1px lightgray;
+    -webkit-box-shadow: 1px 1px 1px 1px lightgray;
+    -moz-box-shadow: 1px 1px 1px 1px lightgray;
 }
 
 .block li.placeholder {
@@ -99,4 +102,36 @@ a.trash {
 }
 a.trash:hover {
 	background: url(../img/trash-open.png) no-repeat 0 0;
+}
+
+
+/** Sub-categoly of block type          **/
+/** colored by Flat-UI's color swatches **/
+/** http://designmodo.github.io/Flat-UI/ **/
+
+/* Basic */
+
+.basic-block {
+	background-color: #7f8c8d; /* Asbestos */
+	color: White;
+}
+
+.comment-block {
+	background-color: #95a5a6; /* Concrete */
+	color: White;
+}
+
+.if-block {
+	background-color: #3498db; /* Peter river */
+	color: White;
+}
+
+.loop-block {
+	background-color: #2ecc71; /* Emerald */
+	color: White;
+}
+
+.var-block {
+	background-color: #9b59b6; /* Amethyst */
+	color: White;
 }

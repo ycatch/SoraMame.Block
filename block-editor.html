@@ -91,9 +91,9 @@
 				  <div id="collapse11" class="panel-collapse collapse in">
 					<div class="panel-body">
 						<ol class="pallet-code block connect-area">
-							<li>input</li>
-							<li>print</li>
-							<li>comment</li>
+							<li class="basic-block">input</li>
+							<li class="basic-block">print</li>
+							<li class="comment-block">comment</li>
 						</ol>
 					</div>
 				  </div>
@@ -112,9 +112,9 @@
 				  <div id="collapse12" class="panel-collapse collapse">
 					<div class="panel-body">
 						<ol class="pallet-code block connect-area">
-							<li>if ()</li>
-							<li>else if ()</li>
-							<li>else</li>
+							<li class="if-block">if ()</li>
+							<li class="if-block">else if ()</li>
+							<li class="if-block">else</li>
 						</ol>
 					</div>
 				  </div>
@@ -133,8 +133,8 @@
 				  <div id="collapse13" class="panel-collapse collapse">
 					<div class="panel-body">
 						<ol class="pallet-code block connect-area">
-							<li>while</li>
-							<li>for</li>
+							<li class="loop-block">while</li>
+							<li class="loop-block">for</li>
 						</ol>
 					</div>
 				  </div>
@@ -144,17 +144,17 @@
 				<div class="panel panel-default">
 				  <div class="panel-heading">
 					<h4 class="panel-title">
-						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse13">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse14">
 							VAR
 						</a>
 					</h4>
 				  </div>
 				  <!-- panel-collapse -->
-				  <div id="collapse13" class="panel-collapse collapse">
+				  <div id="collapse14" class="panel-collapse collapse">
 					<div class="panel-body">
-						<ol class="pallet-code connect-area">
-							<li>yokohama</li>
-							<li>shimizu</li>
+						<ol class="pallet-code block connect-area">
+							<li class="var-block">yokohama</li>
+							<li class="var-block">shimizu</li>
 						</ol>
 					</div>
 				  </div>
@@ -166,61 +166,61 @@
 		<!-- Main Edit Area -->
 			<div class="col-md-8">
 				<ol class="block connect-area">
-					<li class="palette-turquoise">
-						var name=INPUT "Name?"
+					<li  class="basic-block">
+						var name = INPUT "Name?"
 					</li>
-					<li>
+					<li class="var-block">
 						var msg = "Hello:" + name + "\n"
 					</li>
-					<li>
+					<li class="var-block">
 						var i=1
 					</li>
-					<li>
+					<li class="loop-block">
 						WHILE (i <= 15) {
 						<ol>
-							<li>
+							<li class="if-block">
 								IF((i % 3 == 0) && (i % 5 == 0)) {
 								<ol>
-									<li>
+									<li class="var-block">
 										msg = msg + i + ": FizzBuzz\n"
 									</li>
 								</ol>
 								} 
 							</li>
-							<li>
+							<li class="if-block">
 								ELSE IF (i % 3 == 0){
 								<ol>
-									<li>
+									<li class="var-block">
 										msg = msg + i + ": Fizz\n"
 									</li>
 								</ol>
 								}
 							</li>
-							<li>
+							<li class="if-block">
 								ELSE IF (i % 5 == 0){
 								<ol>
-									<li>
+									<li class="var-block">
 										msg = msg + i + ": Buzz\n"
 									</li>
 								</ol>
 								}
 							</li>
-							<li>
+							<li class="if-block">
 								ELSE {
 								<ol>
-									<li>
+									<li class="var-block">
 										msg = msg + i + "\n" 
 									</li>
 								</ol>
 								}
 							</li>
-							<li>
+							<li class="var-block">
 								i=i+1
 							</li>
 						</ol>
 						}
 					</li>
-					<li>
+					<li class="basic-block">
 						PRINT msg
 					</li>
 				</ol>
