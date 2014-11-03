@@ -34,7 +34,7 @@
 .block li:hover{
 	/** border: 1px solid gray; **/
 	opacity: 0.8;
-	/** color: #000000; **/
+	padding: 3px 14px 5px 16px;
 	font-weight: bold;
 	box-shadow: 1px 1px 1px 1px lightgray;
     -webkit-box-shadow: 1px 1px 1px 1px lightgray;
