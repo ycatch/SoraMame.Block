@@ -16,9 +16,9 @@
 
 .block li {
 	cursor: move;
-	display: block;
-	margin: 8px;
-	padding: 4px 15px;
+	list-style: none;
+	margin: 8px 8px 8px 8px;
+	padding: 2px 15px 2px 15px;
 	font-size: 12px;
 	font-weight: bold;
 	line-height: 1.4;
@@ -31,7 +31,8 @@
 }
 
 .block li:hover{
-	padding: 2px 17px 6px 13px; /* for float effect*/
+	margin: 6px 8px 10px 8px; /* for float effect*/
+	padding: 0px 17px 4px 13px; /* for float effect*/
 	font-weight: bold;
 	box-shadow: 2px 2px 2px 2px gray;
     -webkit-box-shadow: 2px 2px 2px 2px gray;
@@ -59,6 +60,13 @@
 	border-right: none;
 }
 
+/** in-line Block type **/
+.item-block {
+	cursor: move;
+	display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
 
 /** Code-Pallete **/
 
@@ -107,27 +115,30 @@ a.trash:hover {
 /** http://designmodo.github.io/Flat-UI/ **/
 
 /* Basic */
-
 .basic-block {
 	background-color: #7f8c8d; /* Asbestos */
 	color: White;
 }
 
+/* Comment */
 .comment-block {
 	background-color: #95a5a6; /* Concrete */
 	color: White;
 }
 
+/* IF */
 .if-block {
 	background-color: #3498db; /* Peter river */
 	color: White;
 }
 
+/* Loop */
 .loop-block {
 	background-color: #2ecc71; /* Emerald */
 	color: White;
 }
 
+/* Var */
 .var-block {
 	background-color: #9b59b6; /* Amethyst */
 	color: White;

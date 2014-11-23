@@ -33,7 +33,7 @@
 
 	<div class="container">
 
-		<!-- Static navbar -->
+		<!-- Start Static navbar -->
 		<div class="navbar navbar-inverse navbar-embossed navbar-fixed-top" role="navigation">
 			<div class="container-fluid">
 			  <div class="navbar-header">
@@ -68,12 +68,12 @@
 				</ul>
 			  </div><!--/.nav-collapse -->
 			</div><!--/.container-fluid -->
-		</div>
+		</div><!-- End Static navbar -->
 
 		<!-- Main component -->
 		<div class="row">
 		
-		<!-- start code pallet -->
+			<!-- start code palette -->
 			<div class="col-md-2">
 			<div class="sidebar-nav affix" role="complementary">
 			  <div class="panel-group" id="accordion">
@@ -153,17 +153,20 @@
 				  <div id="collapse14" class="panel-collapse collapse">
 					<div class="panel-body">
 						<ol class="pallet-code block connect-area">
-							<li class="var-block">yokohama</li>
-							<li class="var-block">shimizu</li>
+							<li class="var-block item-block">item0a</li>
+						</ol>
+						<ol class="pallet-code block connect-area">
+							<li class="var-block item-block">item0b</li>
 						</ol>
 					</div>
 				  </div>
 				</div><!-- end panel -->
 			  </div><!-- panel-group -->
 			</div>
-			</div><!-- end code pallet -->
+			</div>
+			<!-- end code palette -->
 
-		<!-- Main Edit Area -->
+			<!-- Main Edit Area -->
 			<div class="col-md-8">
 				<ol class="block connect-area">
 					<li  class="basic-block">
@@ -221,12 +224,26 @@
 						}
 					</li>
 					<li class="basic-block">
-						PRINT msg
+						PRINT
+						<ol class="item-block">
+							<li class="var-block item-block">item01</li>
+							<li class="var-block item-block">item02</li>
+							<li class="var-block item-block">item03</li>
+						</ol>
+					</li>
+					<li class="basic-block">
+						PRINT
+						<ol class="item-block">
+							<li class="var-block item-block">item01</li>
+							<li class="var-block item-block">item02</li>
+							<li class="var-block item-block">item03</li>
+						</ol>
 					</li>
 				</ol>
 			</div>
+			<!-- end of Main Edit Area-->
 
-		<!-- trash area-->
+			<!-- trash area-->
 			<div class="col-md-2">
 				<div class="sidebar-nav affix" role="complementary" 
 					data-toggle="tooltip" data-placement="top" title="double-click:clear">
@@ -236,6 +253,7 @@
 					</ol>
 				</div>
 			</div>
+			<!-- end of trash area-->
 		</div>
 		<!-- end row -->
     </div>
