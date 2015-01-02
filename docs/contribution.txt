@@ -53,3 +53,22 @@ Flat UI Free is licensed under a Creative Commons Attribution 3.0 Unported (CC B
 
 You are allowed to use these elements anywhere you want, however weÅfll highly appreciate if you will link to our [website](http://designmodo.com).
 
+
+
+js-beautify
+------------
+
+Copyright (c) 2007-2013 Einar Lielmanis and contributors.
+
+Beautifier for javascript
+
+http://jsbeautifier.org/
+https://github.com/beautify-web/js-beautify
+
+
+highlight.js
+------------
+
+Syntax highlighting for the Web.
+
+https://highlightjs.org/

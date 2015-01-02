@@ -27,6 +27,11 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+	<!-- Syntax Highlighter -->
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
   </head>
 
   <body>
@@ -178,51 +183,40 @@
 			<div class="tab-content">
 				<!-- tab body #1 -->
 				<div class="tab-pane fade in active" id="menu1">
-					<ol class="block connect-area serialization">
-<li class="basic-block">var name = INPUT "Name?";</li>
-<li class="var-block">var msg = "Hello:" + name + "\n";</li>
-<li class="var-block">var i=1;</li>
-<li class="loop-block">WHILE (i <= 15) {
-<ol>
-<li class="if-block">IF((i % 3 == 0) && (i % 5 == 0)) {
-<ol>
-<li class="var-block">msg = msg + i + ": FizzBuzz\n";</li>
-</ol>
-} </li>
-<li class="if-block">ELSE IF (i % 3 == 0){
-<ol>
-<li class="var-block">msg = msg + i + ": Fizz\n";</li>
-</ol>
-}</li>
-<li class="if-block">ELSE IF (i % 5 == 0){
-<ol>
-<li class="var-block">msg = msg + i + ": Buzz\n";</li>
-</ol>
-}</li>
-<li class="if-block">ELSE {
-<ol>
-<li class="var-block">msg = msg + i + "\n" ;</li>
-</ol>
-}</li>
-<li class="var-block">i=i+1;</li>
-</ol>
-}</li>
-<li class="basic-block">PRINT
-<ol class="item-block">
-<li class="var-block item-block">item01</li>
-<li class="var-block item-block">item02</li>
-<li class="var-block item-block">item03</li>
-</ol></li>
-<li class="basic-block">PRINT
-<ol class="item-block">
-<li class="var-block item-block">item01</li>
-<li class="var-block item-block">item02</li>
-<li class="var-block item-block">item03</li>
-</ol></li>
+					<ol class="block connect-area serialize">
+						<li class="basic-block">var name = INPUT "Name?";</li>
+						<li class="var-block">var msg = "Hello:" + name + "\n";</li>
+						<li class="var-block">var i=1;</li>
+						<li class="loop-block">While (i <= 15) {
+							<ol>
+							<li class="if-block">If((i % 3 == 0) && (i % 5 == 0)) {
+							<ol>
+								<li class="var-block">msg = msg + i + ": FizzBuzz\n";</li>
+							</ol>
+						} </li>
+						<li class="if-block">Else If (i % 3 == 0){
+							<ol>
+							<li class="var-block">msg = msg + i + ": Fizz\n";</li>
+							</ol>
+						}</li>
+						<li class="if-block">Else If (i % 5 == 0){
+							<ol>
+							<li class="var-block">msg = msg + i + ": Buzz\n";</li>
+							</ol>
+						}</li>
+						<li class="if-block">Else {
+						<ol>
+						<li class="var-block">msg = msg + i + "\n" ;</li>
+						</ol>
+						}</li>
+						<li class="var-block">i=i+1;</li>
+						</ol>
+						}</li>
 				</div>
 				<!-- tab body #2 -->
 				<div class="tab-pane fade" id="menu2">
-					<pre id="serialize_output">
+					<pre>
+					<code class="js"></code>
 					</pre>
 				</div>
 			</div>
@@ -254,6 +248,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="lib/js/ie10-viewport-bug-workaround.js"></script>
 	<script type="text/javascript" src="lib/js/jquery-sortable.js"></script>
+	<script type="text/javascript" src="lib/js/beautify.js"></script>
 	<script type="text/javascript">
 		$('ol.pallet-code').sortable({
 			group: 'connect-area',
@@ -284,8 +279,8 @@
 		};
 		
 		function setSerializeBlock() {
-			var data = $('.serialization').text();
-			$('#serialize_output').text(data);
+			var data = $('.serialize').text();
+			$("pre code").text(js_beautify(data));
 		};
 	</script>
   </body>
