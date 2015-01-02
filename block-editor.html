@@ -179,77 +179,46 @@
 				<!-- tab body #1 -->
 				<div class="tab-pane fade in active" id="menu1">
 					<ol class="block connect-area serialization">
-						<li  class="basic-block">
-							var name = INPUT "Name?"
-						</li>
-						<li class="var-block">
-							var msg = "Hello:" + name + "\n"
-						</li>
-						<li class="var-block">
-							var i=1
-						</li>
-						<li class="loop-block">
-							WHILE (i <= 15) {
-							<ol>
-								<li class="if-block">
-									IF((i % 3 == 0) && (i % 5 == 0)) {
-									<ol>
-										<li class="var-block">
-											msg = msg + i + ": FizzBuzz\n"
-										</li>
-									</ol>
-									} 
-								</li>
-								<li class="if-block">
-									ELSE IF (i % 3 == 0){
-									<ol>
-										<li class="var-block">
-											msg = msg + i + ": Fizz\n"
-										</li>
-									</ol>
-									}
-								</li>
-								<li class="if-block">
-									ELSE IF (i % 5 == 0){
-									<ol>
-										<li class="var-block">
-											msg = msg + i + ": Buzz\n"
-										</li>
-									</ol>
-									}
-								</li>
-								<li class="if-block">
-									ELSE {
-									<ol>
-										<li class="var-block">
-											msg = msg + i + "\n" 
-										</li>
-									</ol>
-									}
-								</li>
-								<li class="var-block">
-									i=i+1
-								</li>
-							</ol>
-							}
-						</li>
-						<li class="basic-block">
-							PRINT
-							<ol class="item-block">
-								<li class="var-block item-block">item01</li>
-								<li class="var-block item-block">item02</li>
-								<li class="var-block item-block">item03</li>
-							</ol>
-						</li>
-						<li class="basic-block">
-							PRINT
-							<ol class="item-block">
-								<li class="var-block item-block">item01</li>
-								<li class="var-block item-block">item02</li>
-								<li class="var-block item-block">item03</li>
-							</ol>
-						</li>
-					</ol>
+<li class="basic-block">var name = INPUT "Name?";</li>
+<li class="var-block">var msg = "Hello:" + name + "\n";</li>
+<li class="var-block">var i=1;</li>
+<li class="loop-block">WHILE (i <= 15) {
+<ol>
+<li class="if-block">IF((i % 3 == 0) && (i % 5 == 0)) {
+<ol>
+<li class="var-block">msg = msg + i + ": FizzBuzz\n";</li>
+</ol>
+} </li>
+<li class="if-block">ELSE IF (i % 3 == 0){
+<ol>
+<li class="var-block">msg = msg + i + ": Fizz\n";</li>
+</ol>
+}</li>
+<li class="if-block">ELSE IF (i % 5 == 0){
+<ol>
+<li class="var-block">msg = msg + i + ": Buzz\n";</li>
+</ol>
+}</li>
+<li class="if-block">ELSE {
+<ol>
+<li class="var-block">msg = msg + i + "\n" ;</li>
+</ol>
+}</li>
+<li class="var-block">i=i+1;</li>
+</ol>
+}</li>
+<li class="basic-block">PRINT
+<ol class="item-block">
+<li class="var-block item-block">item01</li>
+<li class="var-block item-block">item02</li>
+<li class="var-block item-block">item03</li>
+</ol></li>
+<li class="basic-block">PRINT
+<ol class="item-block">
+<li class="var-block item-block">item01</li>
+<li class="var-block item-block">item02</li>
+<li class="var-block item-block">item03</li>
+</ol></li>
 				</div>
 				<!-- tab body #2 -->
 				<div class="tab-pane fade" id="menu2">
@@ -315,7 +284,7 @@
 		};
 		
 		function setSerializeBlock() {
-			var data = $('.serialization').find('li').text();
+			var data = $('.serialization').text();
 			$('#serialize_output').text(data);
 		};
 	</script>
