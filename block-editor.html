@@ -172,13 +172,13 @@
 			<!-- tabs -->
 			<ul class="nav nav-tabs">
 				<li class="active"><a href="#menu1" data-toggle="tab">Block</a></li>
-				<li><a href="#menu2" data-toggle="tab">Code</a></li>
+				<li onclick="setSerializeBlock()"><a href="#menu2" data-toggle="tab">Code</a></li>
 			</ul>
 			<!-- tab body -->
 			<div class="tab-content">
 				<!-- tab body #1 -->
 				<div class="tab-pane fade in active" id="menu1">
-					<ol class="block connect-area">
+					<ol class="block connect-area serialization">
 						<li  class="basic-block">
 							var name = INPUT "Name?"
 						</li>
@@ -253,7 +253,6 @@
 				</div>
 				<!-- tab body #2 -->
 				<div class="tab-pane fade" id="menu2">
-					this is code area
 					<pre id="serialize_output">
 					</pre>
 				</div>
@@ -295,12 +294,12 @@
 				if(!container.options.drop) {
 					item.clone().insertAfter(item)
 				}
-				_super(item)
+				_super(item);
 			}
 		});
 
-		$('ol.block').sortable({
-			group: 'connect-area'
+		var group_serial = $('ol.block').sortable({
+			group: 'connect-area',
 		});
 
 		$('ol.trash-code').sortable({
@@ -313,6 +312,11 @@
 			if(window.confirm("Clear trash?")) {
 				$("#trash-can").empty();
 			}
+		};
+		
+		function setSerializeBlock() {
+			var data = $('.serialization').find('li').text();
+			$('#serialize_output').text(data);
 		};
 	</script>
   </body>
