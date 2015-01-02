@@ -168,78 +168,97 @@
 
 			<!-- Main Edit Area -->
 			<div class="col-md-8">
-				<ol class="block connect-area">
-					<li  class="basic-block">
-						var name = INPUT "Name?"
-					</li>
-					<li class="var-block">
-						var msg = "Hello:" + name + "\n"
-					</li>
-					<li class="var-block">
-						var i=1
-					</li>
-					<li class="loop-block">
-						WHILE (i <= 15) {
-						<ol>
-							<li class="if-block">
-								IF((i % 3 == 0) && (i % 5 == 0)) {
-								<ol>
-									<li class="var-block">
-										msg = msg + i + ": FizzBuzz\n"
-									</li>
-								</ol>
-								} 
-							</li>
-							<li class="if-block">
-								ELSE IF (i % 3 == 0){
-								<ol>
-									<li class="var-block">
-										msg = msg + i + ": Fizz\n"
-									</li>
-								</ol>
-								}
-							</li>
-							<li class="if-block">
-								ELSE IF (i % 5 == 0){
-								<ol>
-									<li class="var-block">
-										msg = msg + i + ": Buzz\n"
-									</li>
-								</ol>
-								}
-							</li>
-							<li class="if-block">
-								ELSE {
-								<ol>
-									<li class="var-block">
-										msg = msg + i + "\n" 
-									</li>
-								</ol>
-								}
-							</li>
-							<li class="var-block">
-								i=i+1
-							</li>
-						</ol>
-						}
-					</li>
-					<li class="basic-block">
-						PRINT
-						<ol class="item-block">
-							<li class="var-block item-block">item01</li>
-							<li class="var-block item-block">item02</li>
-							<li class="var-block item-block">item03</li>
-						</ol>
-					</li>
-					<li class="basic-block">
-						PRINT
-						<ol class="item-block">
-							<li class="var-block item-block">item01</li>
-							<li class="var-block item-block">item02</li>
-							<li class="var-block item-block">item03</li>
-						</ol>
-					</li>
-				</ol>
+
+			<!-- tabs -->
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#menu1" data-toggle="tab">Block</a></li>
+				<li><a href="#menu2" data-toggle="tab">Code</a></li>
+			</ul>
+			<!-- tab body -->
+			<div class="tab-content">
+				<!-- tab body #1 -->
+				<div class="tab-pane fade in active" id="menu1">
+					<ol class="block connect-area">
+						<li  class="basic-block">
+							var name = INPUT "Name?"
+						</li>
+						<li class="var-block">
+							var msg = "Hello:" + name + "\n"
+						</li>
+						<li class="var-block">
+							var i=1
+						</li>
+						<li class="loop-block">
+							WHILE (i <= 15) {
+							<ol>
+								<li class="if-block">
+									IF((i % 3 == 0) && (i % 5 == 0)) {
+									<ol>
+										<li class="var-block">
+											msg = msg + i + ": FizzBuzz\n"
+										</li>
+									</ol>
+									} 
+								</li>
+								<li class="if-block">
+									ELSE IF (i % 3 == 0){
+									<ol>
+										<li class="var-block">
+											msg = msg + i + ": Fizz\n"
+										</li>
+									</ol>
+									}
+								</li>
+								<li class="if-block">
+									ELSE IF (i % 5 == 0){
+									<ol>
+										<li class="var-block">
+											msg = msg + i + ": Buzz\n"
+										</li>
+									</ol>
+									}
+								</li>
+								<li class="if-block">
+									ELSE {
+									<ol>
+										<li class="var-block">
+											msg = msg + i + "\n" 
+										</li>
+									</ol>
+									}
+								</li>
+								<li class="var-block">
+									i=i+1
+								</li>
+							</ol>
+							}
+						</li>
+						<li class="basic-block">
+							PRINT
+							<ol class="item-block">
+								<li class="var-block item-block">item01</li>
+								<li class="var-block item-block">item02</li>
+								<li class="var-block item-block">item03</li>
+							</ol>
+						</li>
+						<li class="basic-block">
+							PRINT
+							<ol class="item-block">
+								<li class="var-block item-block">item01</li>
+								<li class="var-block item-block">item02</li>
+								<li class="var-block item-block">item03</li>
+							</ol>
+						</li>
+					</ol>
+				</div>
+				<!-- tab body #2 -->
+				<div class="tab-pane fade" id="menu2">
+					this is code area
+					<pre id="serialize_output">
+					</pre>
+				</div>
+			</div>
+
 			</div>
 			<!-- end of Main Edit Area-->
 
