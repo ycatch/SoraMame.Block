@@ -30,8 +30,6 @@
 
 	<!-- Syntax Highlighter -->
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
   </head>
 
   <body>
@@ -96,7 +94,7 @@
 				  <div id="collapse11" class="panel-collapse collapse in">
 					<div class="panel-body">
 						<ol class="pallet-code block connect-area">
-							<li class="basic-block">input</li>
+							<li class="basic-block">input();</li>
 							<li class="basic-block">print</li>
 							<li class="comment-block">comment</li>
 						</ol>
@@ -184,27 +182,27 @@
 				<!-- tab body #1 -->
 				<div class="tab-pane fade in active" id="menu1">
 					<ol class="block connect-area serialize">
-						<li class="basic-block">var name = INPUT "Name?";</li>
+						<li class="basic-block">var name = prompt("Name?");</li>
 						<li class="var-block">var msg = "Hello:" + name + "\n";</li>
 						<li class="var-block">var i=1;</li>
-						<li class="loop-block">While (i <= 15) {
+						<li class="loop-block">while (i <= 15) {
 							<ol>
-							<li class="if-block">If((i % 3 == 0) && (i % 5 == 0)) {
+							<li class="if-block">if((i % 3 == 0) && (i % 5 == 0)) {
 							<ol>
 								<li class="var-block">msg = msg + i + ": FizzBuzz\n";</li>
 							</ol>
 						} </li>
-						<li class="if-block">Else If (i % 3 == 0){
+						<li class="if-block">else if (i % 3 == 0){
 							<ol>
 							<li class="var-block">msg = msg + i + ": Fizz\n";</li>
 							</ol>
 						}</li>
-						<li class="if-block">Else If (i % 5 == 0){
+						<li class="if-block">else if (i % 5 == 0){
 							<ol>
 							<li class="var-block">msg = msg + i + ": Buzz\n";</li>
 							</ol>
 						}</li>
-						<li class="if-block">Else {
+						<li class="if-block">else {
 						<ol>
 						<li class="var-block">msg = msg + i + "\n" ;</li>
 						</ol>
@@ -249,6 +247,8 @@
     <script src="lib/js/ie10-viewport-bug-workaround.js"></script>
 	<script type="text/javascript" src="lib/js/jquery-sortable.js"></script>
 	<script type="text/javascript" src="lib/js/beautify.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 	<script type="text/javascript">
 		$('ol.pallet-code').sortable({
 			group: 'connect-area',
