@@ -246,9 +246,10 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="lib/js/ie10-viewport-bug-workaround.js"></script>
 	<script type="text/javascript" src="lib/js/jquery-sortable.js"></script>
+	
 	<script type="text/javascript" src="lib/js/beautify.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+
 	<script type="text/javascript">
 		$('ol.pallet-code').sortable({
 			group: 'connect-area',
@@ -281,6 +282,10 @@
 		function setSerializeBlock() {
 			var data = $('.serialize').text();
 			$("pre code").text(js_beautify(data));
+			
+			$('pre code').each(function(i, block) {
+				hljs.highlightBlock(block);
+			});
 		};
 	</script>
   </body>
