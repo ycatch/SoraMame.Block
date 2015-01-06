@@ -59,159 +59,161 @@
 
 		<!-- Main component -->
 		<div class="row">
-		
-			<!-- start code palette -->
-			<div class="col-md-2">
-			<div class="sidebar-nav affix" role="complementary">
-			  <div class="panel-group" id="accordion">
-			
-				<!-- start panel -->
-				<div class="panel panel-default">
-				  <div class="panel-heading">
-					<h4 class="panel-title">
-						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse11">
-							BASIC
-						</a>
-					</h4>
-				  </div>
-				  <!-- panel-collapse -->
-				  <div id="collapse11" class="panel-collapse collapse in">
-					<div class="panel-body">
-						<ol class="pallet-code block connect-area">
-							<li class="basic-block">input();</li>
-							<li class="basic-block">print</li>
-							<li class="comment-block">comment</li>
-						</ol>
-					</div>
-				  </div>
-				</div><!-- end panel -->
-				
-				<!-- start panel -->
-				<div class="panel panel-default">
-				  <div class="panel-heading">
-					<h4 class="panel-title">
-						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse12">
-							IF
-						</a>
-					</h4>
-				  </div>
-				  <!-- panel-collapse -->
-				  <div id="collapse12" class="panel-collapse collapse">
-					<div class="panel-body">
-						<ol class="pallet-code block connect-area">
-							<li class="if-block">if ()</li>
-							<li class="if-block">else if ()</li>
-							<li class="if-block">else</li>
-						</ol>
-					</div>
-				  </div>
-				</div><!-- end panel -->
-				
-				<!-- start panel -->
-				<div class="panel panel-default">
-				  <div class="panel-heading">
-					<h4 class="panel-title">
-						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse13">
-							LOOP
-						</a>
-					</h4>
-				  </div>
-				  <!-- panel-collapse -->
-				  <div id="collapse13" class="panel-collapse collapse">
-					<div class="panel-body">
-						<ol class="pallet-code block connect-area">
-							<li class="loop-block">while</li>
-							<li class="loop-block">for</li>
-						</ol>
-					</div>
-				  </div>
-				</div><!-- end panel -->
-				
-				<!-- start panel -->
-				<div class="panel panel-default">
-				  <div class="panel-heading">
-					<h4 class="panel-title">
-						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse14">
-							VAR
-						</a>
-					</h4>
-				  </div>
-				  <!-- panel-collapse -->
-				  <div id="collapse14" class="panel-collapse collapse">
-					<div class="panel-body">
-						<ol class="pallet-code block connect-area">
-							<li class="var-block item-block">item0a</li>
-						</ol>
-						<ol class="pallet-code block connect-area">
-							<li class="var-block item-block">item0b</li>
-						</ol>
-					</div>
-				  </div>
-				</div><!-- end panel -->
-			  </div><!-- panel-group -->
-			</div>
-			</div>
-			<!-- end code palette -->
+		  <!-- tab body -->
+		  <div class="tab-content">
 
-			<!-- Main Edit Area -->
-			<div class="col-md-8">
-
-			<!-- tab body -->
-			<div class="tab-content">
 				<!-- tab body #1 -->
 				<div class="tab-pane fade in active" id="menu1">
-					<ol class="block connect-area serialize">
-						<li class="basic-block">var name = prompt("Name?");</li>
-						<li class="var-block">var msg = "Hello:" + name + "\n";</li>
-						<li class="var-block">var i=1;</li>
-						<li class="loop-block">while (i <= 15) {
-							<ol>
-							<li class="if-block">if((i % 3 == 0) && (i % 5 == 0)) {
-							<ol>
-								<li class="var-block">msg = msg + i + ": FizzBuzz\n";</li>
+
+				<!-- start code palette -->
+				<div class="col-md-2">
+				<div class="sidebar-nav affix" role="complementary">
+				  <div class="panel-group" id="accordion">
+				
+					<!-- start panel -->
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse11">
+								BASIC
+							</a>
+						</h4>
+					  </div>
+					  <!-- panel-collapse -->
+					  <div id="collapse11" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<ol class="pallet-code block connect-area">
+								<li class="basic-block">input();</li>
+								<li class="basic-block">print</li>
+								<li class="comment-block">comment</li>
 							</ol>
-						} </li>
-						<li class="if-block">else if (i % 3 == 0){
-							<ol>
-							<li class="var-block">msg = msg + i + ": Fizz\n";</li>
+						</div>
+					  </div>
+					</div><!-- end panel -->
+					
+					<!-- start panel -->
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse12">
+								IF
+							</a>
+						</h4>
+					  </div>
+					  <!-- panel-collapse -->
+					  <div id="collapse12" class="panel-collapse collapse">
+						<div class="panel-body">
+							<ol class="pallet-code block connect-area">
+								<li class="if-block">if ()</li>
+								<li class="if-block">else if ()</li>
+								<li class="if-block">else</li>
 							</ol>
-						}</li>
-						<li class="if-block">else if (i % 5 == 0){
-							<ol>
-							<li class="var-block">msg = msg + i + ": Buzz\n";</li>
+						</div>
+					  </div>
+					</div><!-- end panel -->
+					
+					<!-- start panel -->
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse13">
+								LOOP
+							</a>
+						</h4>
+					  </div>
+					  <!-- panel-collapse -->
+					  <div id="collapse13" class="panel-collapse collapse">
+						<div class="panel-body">
+							<ol class="pallet-code block connect-area">
+								<li class="loop-block">while</li>
+								<li class="loop-block">for</li>
 							</ol>
-						}</li>
-						<li class="if-block">else {
-						<ol>
-						<li class="var-block">msg = msg + i + "\n" ;</li>
-						</ol>
-						}</li>
-						<li class="var-block">i=i+1;</li>
-						</ol>
-						}</li>
+						</div>
+					  </div>
+					</div><!-- end panel -->
+					
+					<!-- start panel -->
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse14">
+								VAR
+							</a>
+						</h4>
+					  </div>
+					  <!-- panel-collapse -->
+					  <div id="collapse14" class="panel-collapse collapse">
+						<div class="panel-body">
+							<ol class="pallet-code block connect-area">
+								<li class="var-block item-block">item0a</li>
+							</ol>
+							<ol class="pallet-code block connect-area">
+								<li class="var-block item-block">item0b</li>
+							</ol>
+						</div>
+					  </div>
+					</div><!-- end panel -->
+				  </div><!-- panel-group -->
 				</div>
-				<!-- tab body #2 -->
-				<div class="tab-pane fade" id="menu2">
+				</div>
+				<!-- end code palette -->
+
+				<!-- Main Edit Area -->
+				<div class="col-md-8">
+						<ol class="block connect-area serialize">
+							<li class="basic-block">var name = prompt("Name?");</li>
+							<li class="var-block">var msg = "Hello:" + name + "\n";</li>
+							<li class="var-block">var i=1;</li>
+							<li class="loop-block">while (i <= 15) {
+								<ol>
+								<li class="if-block">if((i % 3 == 0) && (i % 5 == 0)) {
+								<ol>
+									<li class="var-block">msg = msg + i + ": FizzBuzz\n";</li>
+								</ol>
+							} </li>
+							<li class="if-block">else if (i % 3 == 0){
+								<ol>
+								<li class="var-block">msg = msg + i + ": Fizz\n";</li>
+								</ol>
+							}</li>
+							<li class="if-block">else if (i % 5 == 0){
+								<ol>
+								<li class="var-block">msg = msg + i + ": Buzz\n";</li>
+								</ol>
+							}</li>
+							<li class="if-block">else {
+							<ol>
+							<li class="var-block">msg = msg + i + "\n" ;</li>
+							</ol>
+							}</li>
+							<li class="var-block">i=i+1;</li>
+							</ol>
+							}</li>
+				</div>
+				<!-- end of Main Edit Area-->
+
+				<!-- trash area-->
+				<div class="col-md-2">
+					<div class="sidebar-nav affix" role="complementary" 
+						data-toggle="tooltip" data-placement="top" title="double-click:clear">
+						<a class="trash" href="#" ondblclick="clearTrash()">
+						</a>
+						<ol id="trash-can" class="trash-code block connect-area">
+						</ol>
+					</div>
+				</div>
+				<!-- end of trash area-->
+			  </div><!-- end of tab body #1 -->
+
+			  <!-- tab body #2 -->
+			  <div class="col-md-2"></div>
+			  <div class="tab-pane fade" id="menu2">
 					<pre>
 					<code class="js"></code>
 					</pre>
-				</div>
-			</div>
-
-			</div>
-			<!-- end of Main Edit Area-->
-
-			<!-- trash area-->
-			<div class="col-md-2">
-				<div class="sidebar-nav affix" role="complementary" 
-					data-toggle="tooltip" data-placement="top" title="double-click:clear">
-					<a class="trash" href="#" ondblclick="clearTrash()">
-					</a>
-					<ol id="trash-can" class="trash-code block connect-area">
-					</ol>
-				</div>
-			</div>
-			<!-- end of trash area-->
+			  </div>
+			  <div class="col-md-"></div>
+		  </div> <!-- end of tab body-->
 		</div>
 		<!-- end row -->
     </div>
