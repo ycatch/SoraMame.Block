@@ -52,7 +52,7 @@
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#menu1" data-toggle="tab">Block</a></li>
 					<li onclick="setSerializeBlock()"><a href="#menu2" data-toggle="tab">Code</a></li>
-					<li><a href="#"><i class="glyphicon glyphicon-play"></i> Run</a></li>
+					<li><a href="javascript:void(0)" onclick="execCodeBlock(); return false;"><i class="glyphicon glyphicon-play"></i> Run</a></li>
 					<li><a href="#"><i class="glyphicon glyphicon-stop"></i> Stop</a></li>
 				</ul>
 			  </div><!--/.nav-collapse -->
@@ -162,35 +162,36 @@
 
 				<!-- Main Edit Area -->
 				<div class="col-md-8">
-						<ol class="block connect-area serialize">
-							<li class="basic-block">var name = prompt("Name?");</li>
-							<li class="var-block">var msg = "Hello:" + name + "\n";</li>
-							<li class="var-block">var i=1;</li>
-							<li class="loop-block">while (i <= 15) {
-								<ol>
-								<li class="if-block">if((i % 3 == 0) && (i % 5 == 0)) {
+				<ol class="block connect-area serialize">
+					<li class="var-block">var msg = "Hello:" + name + "\n";</li>
+					<li class="var-block">var i=1;</li>
+					<li class="loop-block">while (i <= 15) { 
+						<ol>
+							<li class="if-block">if((i % 3 == 0) && (i % 5 == 0)) { 
 								<ol>
 									<li class="var-block">msg = msg + i + ": FizzBuzz\n";</li>
-								</ol>
-							} </li>
-							<li class="if-block">else if (i % 3 == 0){
+								</ol>} 
+							</li>
+							<li class="if-block">else if (i % 3 == 0){ 
 								<ol>
-								<li class="var-block">msg = msg + i + ": Fizz\n";</li>
-								</ol>
-							}</li>
-							<li class="if-block">else if (i % 5 == 0){
+									<li class="var-block">msg = msg + i + ": Fizz\n";</li>
+								</ol>}
+							</li>
+							<li class="if-block">else if (i % 5 == 0){ 
 								<ol>
-								<li class="var-block">msg = msg + i + ": Buzz\n";</li>
-								</ol>
-							}</li>
-							<li class="if-block">else {
-							<ol>
-							<li class="var-block">msg = msg + i + "\n" ;</li>
-							</ol>
-							}</li>
+									<li class="var-block">msg = msg + i + ": Buzz\n";</li>
+								</ol>}
+							</li>
+							<li class="if-block">else { 
+								<ol>
+									<li class="var-block">msg = msg + i + "\n" ;</li>
+								</ol>} 
+							</li>
 							<li class="var-block">i=i+1;</li>
-							</ol>
-							}</li>
+						</ol>}
+					</li>
+					<li class="basic-block">alert(msg);</li>
+				</ol>
 				</div>
 				<!-- end of Main Edit Area-->
 
@@ -256,6 +257,8 @@
 
 	</script>
 	<script type="text/javascript">
+		var code ={};
+
 		function clearTrash(){
 			if(window.confirm("Clear trash?")) {
 				$("#trash-can").empty();
@@ -269,6 +272,17 @@
 			$('pre code').each(function(i, block) {
 				hljs.highlightBlock(block);
 			});
+		};
+		
+		function getCodeBlock() {
+			return $("pre code").text();
+		};
+
+		function execCodeBlock() {
+			setSerializeBlock();
+			var codeText = getCodeBlock()
+			code.exec = new Function(codeText);
+			code.exec();
 		};
 	</script>
   </body>
