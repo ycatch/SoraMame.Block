@@ -21,7 +21,7 @@ see LICENSE file or http://opensource.org/licenses/MIT
 Demo
 -------
 
-*FizzBuzz
+* FizzBuzz
   - http://www.catch.jp/program/soramame_block/
 
 
