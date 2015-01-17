@@ -1,7 +1,7 @@
-SoraMame block-editor
-======================
+SoraMame Block code editor
+==========================
 
-SoraMame is block-type code-editor for tiny script.
+SoraMame is block-type code editor for tiny script.
 
 - Block-type code editor without Blockly / Scratch.
 - Very small.
