@@ -44,11 +44,15 @@ BasicGame.Game.prototype = {
 
     create: function () {
 	
+		// get and exec code-block
+		SORAMAME_BLOCK.execCodeBlock();
+		
 		//  We're going to be using physics, so enable the Arcade Physics system
 		this.physics.startSystem(Phaser.Physics.ARCADE);
 
 		//  A simple background for our game
-		this._background = this.add.tileSprite(0, 0, 800, 576, 'sky');
+		var asset_name_bg = 'sky';
+		this._background = this.add.tileSprite(0, 0, 800, 576, asset_name_bg);
 
 		//  Create our map & layer
  		this._map = this.add.tilemap('map', 32, 32);
@@ -190,7 +194,7 @@ BasicGame.Game.prototype = {
 		
 		this.game.paused = true;
 		//var pausedText = this.add.text(this.camera.x + 60, 240, "Click to Menu.", { fontSize: '8px', fill: '#000' });
-		var pausedText = this.add.text(this.camera.x + 60, 240, SORAMAME_BLOCK.test.msg, { fontSize: '8px', fill: '#000' });
+		var pausedText = this.add.text(this.camera.x + 60, 240, SORAMAME_BLOCK.test.end_msg, { fontSize: '8px', fill: '#000' });
 
 		//  Then let's go back to the main menu.
 		this.input.onDown.add(function(){
