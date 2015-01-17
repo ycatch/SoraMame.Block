@@ -51,8 +51,8 @@
 			  <div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#menu1" data-toggle="tab">Block</a></li>
-					<li onclick="setSerializeBlock()"><a href="#menu2" data-toggle="tab">Code</a></li>
-					<li><a href="javascript:void(0)" onclick="execCodeBlock(); return false;"><i class="glyphicon glyphicon-play"></i> Run</a></li>
+					<li onclick="SORAMAME_BLOCK.setSerializeBlock()"><a href="#menu2" data-toggle="tab">Code</a></li>
+					<li><a href="javascript:void(0)" onclick="SORAMAME_BLOCK.execCodeBlock(); return false;"><i class="glyphicon glyphicon-play"></i> Run</a></li>
 					<li><a href="#"><i class="glyphicon glyphicon-stop"></i> Stop</a></li>
 				</ul>
 			  </div><!--/.nav-collapse -->
@@ -199,7 +199,7 @@
 				<div class="col-md-2">
 					<div class="sidebar-nav affix" role="complementary" 
 						data-toggle="tooltip" data-placement="top" title="double-click:clear">
-						<a class="trash" href="#" ondblclick="clearTrash()">
+						<a class="trash" href="#" ondblclick="SORAMAME_BLOCK.clearTrash()">
 						</a>
 						<ol id="trash-can" class="trash-code block connect-area">
 						</ol>
@@ -230,6 +230,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="lib/js/ie10-viewport-bug-workaround.js"></script>
 	<script type="text/javascript" src="lib/js/jquery-sortable.js"></script>
+	<script type="text/javascript" src="lib/js/soramame.block.js"></script>
 	
 	<script type="text/javascript" src="lib/js/beautify.js"></script>
 	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
@@ -254,36 +255,6 @@
 		$('ol.trash-code').sortable({
 			group: 'connect-area',
 		});
-
-	</script>
-	<script type="text/javascript">
-		var code ={};
-
-		function clearTrash(){
-			if(window.confirm("Clear trash?")) {
-				$("#trash-can").empty();
-			}
-		};
-		
-		function setSerializeBlock() {
-			var data = $('.serialize').text();
-			$("pre code").text(js_beautify(data));
-			
-			$('pre code').each(function(i, block) {
-				hljs.highlightBlock(block);
-			});
-		};
-		
-		function getCodeBlock() {
-			return $("pre code").text();
-		};
-
-		function execCodeBlock() {
-			setSerializeBlock();
-			var codeText = getCodeBlock()
-			code.exec = new Function(codeText);
-			code.exec();
-		};
 	</script>
   </body>
 </html>
