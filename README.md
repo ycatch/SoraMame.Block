@@ -21,7 +21,8 @@ see LICENSE file or http://opensource.org/licenses/MIT
 Demo
 -------
 
-- http://www.catch.jp/program/soramame_block/
+*FizzBuzz
+  - http://www.catch.jp/program/soramame_block/
 
 
 Relational Projects
