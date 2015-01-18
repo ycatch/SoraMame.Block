@@ -1,187 +1,205 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="">
-		<meta name="author" content="">
+		<meta name="description" content="This is very small block-type code editor ">
+		<meta name="author" content="Yutaka Kachi">
 		<link rel="icon" href="lib/img/favicon.ico">
 		<title>Example - SoraMame Block Editor</title>
+
 		<!-- Bootstrap core CSS -->
 		<link href="lib/css/bootstrap.min.css" rel="stylesheet">
+
 		<!-- Custom styles for this template -->
+		<link href="lib/css/dashboard.css" rel="stylesheet">
 		<link href="lib/css/flat-ui.min.css" rel="stylesheet">
-		<link href="lib/css/navbar-fixed-top.css" rel="stylesheet">
 		<link href="lib/css/soramame.block.css" rel="stylesheet">
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/ rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<!-- Syntax Highlighter -->
-		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
+
 	</head>
 	<body>
-		<div class="container">
-			<!-- Start Static navbar -->
-			<div class="navbar navbar-inverse navbar-embossed navbar-fixed-top" role="navigation">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="https://github.com/ycatch/SoraMame.Block">SoraMame Block</a>
-					</div>
-					<div class="navbar-collapse collapse">
-						<ul class="nav navbar-nav">
-							<li class="active">
-								<a href="#menu1" data-toggle="tab">Block</a>
-							</li>
-							<li onclick="SORAMAME_BLOCK.setSerializeBlock()">
-								<a href="#menu2" data-toggle="tab">Code</a>
-							</li>
-					<!--	<li><a href="javascript:void(0)" onclick="SORAMAME_BLOCK.execCodeBlock(); return false;"><i class="glyphicon glyphicon-play"></i> Run</a></li>
-							<li><a href="#"><i class="glyphicon glyphicon-stop"></i> Stop</a></li> -->
-						</ul>
-					</div>
-					<!--/.nav-collapse -->
-				</div>
-				<!--/.container-fluid -->
-			</div>
-			<!-- End Static navbar -->
-			<!-- Main component -->
+		<!-- Start Static navbar -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
-				<div class="row">
-					<!-- tab body -->
-					<div class="tab-content">
-						<!-- tab body #1 -->
-						<div class="tab-pane fade in active" id="menu1">
-							<!-- start game area -->
-							<div class="col-md-4 sidebar">
-								<div id="game">
-									<!-- This has to be inside the game CANVAS -->
-								</div>
-								<!-- start code palette -->
-								<div class="sidebar-nav" role="complementary">
-									<div class="panel-group" id="accordion">
-										<!-- start panel -->
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse11">Back Ground </a>
-												</h4>
-											</div>
-											<!-- panel-collapse -->
-											<div id="collapse11" class="panel-collapse collapse in">
-												<div class="panel-body">
-													<ol class="pallet-code block connect-area">
-														<li class="var-block">SORAMAME_BLOCK.test = {end_msg: "Hello Block123"};</li>
-														<li class="var-block">SORAMAME_BLOCK.test = {end_msg: "Hello Block456"};</li>
-														<li class="var-block">SORAMAME_BLOCK.test = {end_msg: "Hello Block789"};</li>
-														<li class="comment-block">/* comment */</li>
-													</ol>
-												</div>
-											</div>
-										</div>
-										<!-- end panel -->
-										<!-- start panel -->
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse12">IF </a>
-												</h4>
-											</div>
-											<!-- panel-collapse -->
-											<div id="collapse12" class="panel-collapse collapse">
-												<div class="panel-body">
-													<ol class="pallet-code block connect-area">
-														<li class="if-block">if ()</li>
-														<li class="if-block">else if ()</li>
-														<li class="if-block">else</li>
-													</ol>
-												</div>
-											</div>
-										</div>
-										<!-- end panel -->
-										<!-- start panel -->
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse13">LOOP </a>
-												</h4>
-											</div>
-											<!-- panel-collapse -->
-											<div id="collapse13" class="panel-collapse collapse">
-												<div class="panel-body">
-													<ol class="pallet-code block connect-area">
-														<li class="loop-block">while</li>
-														<li class="loop-block">for</li>
-													</ol>
-												</div>
-											</div>
-										</div>
-										<!-- end panel -->
-										<!-- start panel -->
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse14">VAR </a>
-												</h4>
-											</div>
-											<!-- panel-collapse -->
-											<div id="collapse14" class="panel-collapse collapse">
-												<div class="panel-body">
-													<ol class="pallet-code block connect-area">
-														<li class="var-block item-block">item0a</li>
-													</ol>
-													<ol class="pallet-code block connect-area">
-														<li class="var-block item-block">item0b</li>
-													</ol>
-												</div>
-											</div>
-										</div>
-										<!-- end panel -->
-									</div>
-									<!-- panel-group -->
-								</div>
-							</div>
-							<!-- end code palette -->
-							<!-- Main Edit Area -->
-							<div class="col-md-7">
-								<ol class="block connect-area serialize">
-									<li class="comment-block">/* Set Background */</li>
-								</ol>
-							</div>
-							<!-- end of Main Edit Area-->
-							<!-- trash area-->
-							<div class="col-md-1">
-								<div class="sidebar-nav affix" role="complementary" data-toggle="tooltip" data-placement="top" title="double-click:clear">
-									<a class="trash" href="#" ondblclick="SORAMAME_BLOCK.clearTrash()"></a>
-									<ol id="trash-can" class="trash-code block connect-area"></ol>
-								</div>
-							</div>
-							<!-- end of trash area-->
-						</div>
-						<!-- end of tab body #1 -->
-						<!-- tab body #2 -->
-						<div class="col-md-2"></div>
-						<div class="tab-pane fade" id="menu2">
-							<pre>
-						<code class="js"></code>
-						</pre>
-						</div>
-						<div class="col-md-"></div>
-					</div>
-					<!-- end of tab body-->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="https://github.com/ycatch/SoraMame.Block">SoraMame Block</a>
 				</div>
-				<!-- end row -->
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="#menu1" data-toggle="tab">Block</a>
+						</li>
+						<li onclick="SORAMAME_BLOCK.setSerializeBlock()">
+							<a href="#menu2" data-toggle="tab">Code</a>
+						</li>
+<!-- 						<li>
+							<a href="javascript:void(0)" onclick="SORAMAME_BLOCK.execCodeBlock(); return false;">
+								<i class="glyphicon glyphicon-play"></i>Run
+							</a>
+						</li> -->
+					</ul>
+				</div>
 			</div>
+		</nav>
+		<!-- End Static navbar -->
+		<div class="container-fluid">
+			<div class="row">
+				<!-- tab body -->
+				<div class="tab-content">
+					<!-- tab item #1 -->
+					<div class="tab-pane fade in active" id="menu1">
+						<!-- start sidebar -->
+						<div class="col-sm-5 col-md-5 sidebar">
+							<div class="sidebar-nav" role="complementary">
+							
+								<!-- start game area -->
+								<div class="container">
+									<div id="game">
+									<!-- This has to be inside the game CANVAS by Phaser-->
+									</div>
+								</div>
+	
+								<!-- start Code Pallete -->
+								<div class="panel-group" id="accordion">
+									<!-- start panel -->
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h4 class="panel-title">
+												<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse11">Message</a>
+											</h4>
+										</div>
+										<!-- panel-collapse -->
+										<div id="collapse11" class="panel-collapse collapse in">
+											<div class="panel-body">
+												<ol class="pallet-code block connect-area">
+													<li class="var-block">SORAMAME_BLOCK.test = {end_msg: "Hello Block123"};</li>
+													<li class="var-block">SORAMAME_BLOCK.test = {end_msg: "Hello Block456"};</li>
+													<li class="var-block">SORAMAME_BLOCK.test = {end_msg: "Hello Block789"};</li>
+													<li class="comment-block">/* comment */</li>
+												</ol>
+											</div>
+										</div>
+									</div>
+									<!-- end panel -->
+									<!-- start panel -->
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h4 class="panel-title">
+												<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse12">IF </a>
+											</h4>
+										</div>
+										<!-- panel-collapse -->
+										<div id="collapse12" class="panel-collapse collapse">
+											<div class="panel-body">
+												<ol class="pallet-code block connect-area">
+													<li class="if-block">if ()</li>
+													<li class="if-block">else if ()</li>
+													<li class="if-block">else</li>
+													<li class="if-block">if ()</li>
+													<li class="if-block">else if ()</li>
+													<li class="if-block">else</li>
+													<li class="if-block">if ()</li>
+													<li class="if-block">else if ()</li>
+													<li class="if-block">else</li>
+												</ol>
+											</div>
+										</div>
+									</div>
+									<!-- end panel -->
+									<!-- start panel -->
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h4 class="panel-title">
+												<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse13">LOOP </a>
+											</h4>
+										</div>
+										<!-- panel-collapse -->
+										<div id="collapse13" class="panel-collapse collapse">
+											<div class="panel-body">
+												<ol class="pallet-code block connect-area">
+													<li class="loop-block">while</li>
+													<li class="loop-block">for</li>
+												</ol>
+											</div>
+										</div>
+									</div>
+									<!-- end panel -->
+									<!-- start panel -->
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h4 class="panel-title">
+												<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse14">VAR </a>
+											</h4>
+										</div>
+										<!-- panel-collapse -->
+										<div id="collapse14" class="panel-collapse collapse">
+											<div class="panel-body">
+												<ol class="pallet-code block connect-area">
+													<li class="var-block item-block">item0a</li>
+												</ol>
+												<ol class="pallet-code block connect-area">
+													<li class="var-block item-block">item0b</li>
+												</ol>
+											</div>
+										</div>
+									</div>
+									<!-- end panel -->
+								</div>
+								<!-- panel-group -->
+							</div>
+						</div>
+						<!-- end of side-bar -->
+
+						<!-- Main Edit Area -->
+						<div class="col-sm-6 col-sm-offset-5 col-md-6 col-md-offset-5 main">
+							<ol class="block connect-area serialize">
+								<li class="comment-block">/* Set Background */</li>
+							</ol>
+						</div>
+						<!-- end of Main Edit Area-->
+						<!-- trash area-->
+						<div class="col-sm-1 col-md-1">
+							<div class="sidebar-nav affix" role="complementary" data-toggle="tooltip" data-placement="top" title="double-click:clear">
+								<p></p>
+								<a class="trash" href="#" ondblclick="SORAMAME_BLOCK.clearTrash()"></a>
+								<ol id="trash-can" class="trash-code block connect-area"></ol>
+							</div>
+						</div>
+						<!-- end of trash area-->
+					</div>
+					<!-- end of tab item #1 -->
+
+					<!-- tab item #2 -->
+					<div class="tab-pane fade" id="menu2">
+						<div class="col-sm-2 col-md-2"></div>
+						<div class="col-sm-10 col-md-10">
+							<pre>
+								<code class="js"></code>
+							</pre>
+						</div>
+					</div>
+					<!-- end of tab item #2 -->
+				</div>
+				<!-- end of tab body-->
+			</div>
+			<!-- end of row -->
 		</div>
-		<!-- /container -->
+		<!-- end of container -->
+
 		<!-- Game JavaScript ================================================== -->
 		<!-- Load the Phaser library -->
 		<script src="game/js/phaser.min.js"></script>
@@ -206,36 +224,39 @@
 
 			})();
 		</script>
+
 		<!-- Bootstrap core JavaScript ================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="lib/js/bootstrap.min.js"></script>
+		<script src="lib/js/docs.min.js"></script>
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<script src="lib/js/ie10-viewport-bug-workaround.js"></script>
+		<!-- SoraMame Block core JavaScript ================================================== -->
 		<script type="text/javascript" src="lib/js/jquery-sortable.js"></script>
 		<script type="text/javascript" src="lib/js/soramame.block.js"></script>
 		<script type="text/javascript" src="lib/js/beautify.js"></script>
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 		<script type="text/javascript">
-			$('ol.pallet-code').sortable({
-				group: 'connect-area',
-				drop: false,
-				onDragStart: function (item, container, _super) {
-					// Duplicate items of the no drop area
-					if(!container.options.drop) {
-						item.clone().insertAfter(item)
-					}
-					_super(item);
+		$('ol.pallet-code').sortable({
+			group: 'connect-area',
+			drop: false,
+			onDragStart: function (item, container, _super) {
+				// Duplicate items of the no drop area
+				if(!container.options.drop) {
+					item.clone().insertAfter(item)
 				}
-			});
+				_super(item);
+			}
+		});
 
-			$('ol.block').sortable({
-				group: 'connect-area',
-			});
+		$('ol.block').sortable({
+			group: 'connect-area',
+		});
 
-			$('ol.trash-code').sortable({
-				group: 'connect-area',
-			});
-		</script>
+		$('ol.trash-code').sortable({
+			group: 'connect-area',
+		});
+	</script>
 	</body>
 </html>
