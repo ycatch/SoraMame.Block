@@ -24,6 +24,8 @@ BasicGame.Preloader.prototype = {
 	
 	this.load.image('titlepage', 'game/assets/images/title_getaway.png');
 	this.load.image('sky', 'game/assets/images/background.png');
+	this.load.image('jungle', 'game/assets/images/background_jungle.png');
+		this.load.image('planet', 'game/assets/images/background_planet.png');
 	this.load.tilemap('map', 'game/assets/images/tileMap_stage0.json', null, Phaser.Tilemap.TILED_JSON);
     this.load.image('tiles', 'game/assets/images/tileSet.png');
 

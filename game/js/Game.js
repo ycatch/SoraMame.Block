@@ -51,8 +51,7 @@ BasicGame.Game.prototype = {
 		this.physics.startSystem(Phaser.Physics.ARCADE);
 
 		//  A simple background for our game
-		var asset_name_bg = 'sky';
-		this._background = this.add.tileSprite(0, 0, 800, 576, asset_name_bg);
+		this._background = this.add.tileSprite(0, 0, 800, 576, SORAMAME_BLOCK.test.background);
 
 		//  Create our map & layer
  		this._map = this.add.tilemap('map', 32, 32);
