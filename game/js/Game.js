@@ -74,8 +74,8 @@ BasicGame.Game.prototype = {
 		this._scoreText = this.add.text(0, 16, 'Stars: 0', { fontSize: '28px', fill: '#FFF' });
 
 		// ** The player and its settings
-		this._player = this.add.sprite(150, this.world.height - 200, 'dot_dog');
-		this._enemy = this.add.sprite(10, 10, 'enemy');
+		this._player = this.add.sprite(200, this.world.height - 100, 'dot_dog');
+		this._enemy = this.add.sprite(10, 0, 'enemy');
 
 
 		//  We need to enable physics on the player
@@ -108,11 +108,11 @@ BasicGame.Game.prototype = {
 
 		// move to right
 		if (this.game.time.fps > 30) {
-			var move_step = 4;
+			var move_step = SORAMAME_BLOCK.test.speed + 1;
 		} else if(this.game.time.fps > 15) {
-			var move_step = 5;
+			var move_step = SORAMAME_BLOCK.test.speed + 2;
 		} else {
-			var move_step = 7;
+			var move_step = SORAMAME_BLOCK.test.speed + 3;
 		}
 		
 		// scroll running area, stop scroll in goal area.
@@ -129,7 +129,7 @@ BasicGame.Game.prototype = {
 			this._player.body.velocity.y = -300;
 		}
 
-		if (this._player.body.x >= this._enemy.body.x + 10)
+		if (this._player.body.x >= this._enemy.body.x + 5)
 		{
 			this._player.body.x += move_step;
 			this._enemy.body.x += move_step;
@@ -192,8 +192,7 @@ BasicGame.Game.prototype = {
 		//var button = this.add.sprite((this.game.width - 98) / 2, this.game.height - 120, 'start-button');
 		
 		this.game.paused = true;
-		//var pausedText = this.add.text(this.camera.x + 60, 240, "Click to Menu.", { fontSize: '8px', fill: '#000' });
-		var pausedText = this.add.text(this.camera.x + 60, 240, SORAMAME_BLOCK.test.end_msg, { fontSize: '8px', fill: '#000' });
+		var pausedText = this.add.text(this.camera.x + 60, 240, "Click to Menu.", { fontSize: '8px', fill: '#000' });
 
 		//  Then let's go back to the main menu.
 		this.input.onDown.add(function(){
