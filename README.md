@@ -24,13 +24,15 @@ Demo
 * FizzBuzz
   - http://www.catch.jp/program/soramame_block/
 
+* Game
+  - http://www.catch.jp/program/soramame_block/example_game.html
+
 
 Relational Projects
 --------------------
 
-* mameKoma
-  - https://github.com/ycatch/mameKoma
 * jquery-sortable
   - http://johnny.github.io/jquery-sortable/
-
+* games-phaser-getaway
+  - https://github.com/ycatch/games-phaser-getaway
 
