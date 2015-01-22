@@ -26,7 +26,7 @@
 
 	</head>
 	<body>
-		<!-- Start Static navbar -->
+		<!-- ---------- Start Static navbar ---------- -->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -62,18 +62,18 @@
 				<div class="tab-content">
 					<!-- tab item #1 -->
 					<div class="tab-pane fade in active" id="menu1">
-						<!-- start sidebar -->
+						<!-- ---------- start sidebar ---------- -->
 						<div class="col-sm-5 col-md-5 sidebar">
 							<div class="sidebar-nav" role="complementary">
 							
-								<!-- start game area -->
+								<!-- ---------- start game area ---------- -->
 								<div class="container">
 									<div id="game">
 									<!-- This has to be inside the game CANVAS by Phaser-->
 									</div>
 								</div>
 	
-								<!-- start Code Pallete -->
+								<!-- ---------- start Code Pallete ---------- -->
 								<div class="panel-group" id="accordion">
 									<!-- start panel -->
 									<div class="panel panel-default">
@@ -86,10 +86,10 @@
 										<div id="collapse11" class="panel-collapse collapse in">
 											<div class="panel-body">
 												<ol class="pallet-code block connect-area">
-													<li class="var-block">SORAMAME_BLOCK.test = {speed: 1};</li>
-													<li class="var-block">SORAMAME_BLOCK.test = {speed: 2};</li>
-													<li class="var-block">SORAMAME_BLOCK.test = {speed: 3};</li>
-													<li class="var-block">SORAMAME_BLOCK.test = {speed: 4};</li>
+													<li class="var-block">SORAMAME_BLOCK.app.speed = 1;</li>
+													<li class="var-block">SORAMAME_BLOCK.app.speed = 2;</li>
+													<li class="var-block">SORAMAME_BLOCK.app.speed = 3;</li>
+													<li class="var-block">SORAMAME_BLOCK.app.speed = 4;</li>
 													<li class="comment-block">/* comment */</li>
 												</ol>
 											</div>
@@ -107,9 +107,9 @@
 										<div id="collapse13" class="panel-collapse collapse">
 											<div class="panel-body">
 												<ol class="pallet-code block connect-area">
-													<li class="var-block">SORAMAME_BLOCK.test = {background: "city"};</li>
-													<li class="var-block">SORAMAME_BLOCK.test = {background: "jungle"};</li>
-													<li class="var-block">SORAMAME_BLOCK.test = {background: "planet"};</li>
+													<li class="basic-block">SORAMAME_BLOCK.app.background = 'city';</li>
+													<li class="basic-block">SORAMAME_BLOCK.app.background = 'jungle';</li>
+													<li class="basic-block">SORAMAME_BLOCK.app.background = 'planet';</li>
 												</ol>
 											</div>
 										</div>
@@ -164,18 +164,18 @@
 								<!-- panel-group -->
 							</div>
 						</div>
-						<!-- end of side-bar -->
+						<!-- ---------- end of side-bar ---------- -->
 
-						<!-- Main Edit Area -->
+						<!-- ---------- Main Edit Area ---------- -->
 						<div class="col-sm-6 col-sm-offset-5 col-md-6 col-md-offset-5 main">
 							<ol class="block connect-area serialize">
 								<li class="comment-block">/* Set Speed */</li>
-								<li class="var-block">SORAMAME_BLOCK.test = {speed: 1};</li>
+								<li class="var-block">SORAMAME_BLOCK.app.speed = 1;</li>
 								<li class="comment-block">/* Set Background */</li>
 							</ol>
 						</div>
 						<!-- end of Main Edit Area-->
-						<!-- trash area-->
+						<!-- ---------- trash area ---------- -->
 						<div class="col-sm-1 col-md-1">
 							<div class="sidebar-nav affix" role="complementary" data-toggle="tooltip" data-placement="top" title="double-click:clear">
 								<p></p>
@@ -236,7 +236,7 @@
 		<script src="lib/js/docs.min.js"></script>
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<script src="lib/js/ie10-viewport-bug-workaround.js"></script>
-		<!-- SoraMame Block core JavaScript ================================================== -->
+		<!-- SoraMame Block core JavaScript ============================================= -->
 		<script type="text/javascript" src="lib/js/jquery-sortable.js"></script>
 		<script type="text/javascript" src="lib/js/soramame.block.js"></script>
 		<script type="text/javascript" src="lib/js/beautify.js"></script>

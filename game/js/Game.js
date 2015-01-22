@@ -51,7 +51,7 @@ BasicGame.Game.prototype = {
 		this.physics.startSystem(Phaser.Physics.ARCADE);
 
 		//  A simple background for our game
-		this._background = this.add.tileSprite(0, 0, 800, 576, SORAMAME_BLOCK.test.background);
+		this._background = this.add.tileSprite(0, 0, 293, 293, SORAMAME_BLOCK.app.background);
 
 		//  Create our map & layer
  		this._map = this.add.tilemap('map', 32, 32);
@@ -108,11 +108,11 @@ BasicGame.Game.prototype = {
 
 		// move to right
 		if (this.game.time.fps > 30) {
-			var move_step = SORAMAME_BLOCK.test.speed + 1;
+			var move_step = SORAMAME_BLOCK.app.speed + 1;
 		} else if(this.game.time.fps > 15) {
-			var move_step = SORAMAME_BLOCK.test.speed + 2;
+			var move_step = SORAMAME_BLOCK.app.speed + 2;
 		} else {
-			var move_step = SORAMAME_BLOCK.test.speed + 3;
+			var move_step = SORAMAME_BLOCK.app.speed + 3;
 		}
 		
 		// scroll running area, stop scroll in goal area.
