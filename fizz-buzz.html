@@ -266,27 +266,6 @@
 		<script type="text/javascript" src="lib/js/jquery-sortable.js"></script>
 		<script type="text/javascript" src="lib/js/soramame.block.js"></script>
 		<script type="text/javascript" src="lib/js/beautify.js"></script>
-		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-		<script type="text/javascript">
-		$('ol.pallet-code').sortable({
-			group: 'connect-area',
-			drop: false,
-			onDragStart: function (item, container, _super) {
-				// Duplicate items of the no drop area
-				if(!container.options.drop) {
-					item.clone().insertAfter(item)
-				}
-				_super(item);
-			}
-		});
-
-		$('ol.block').sortable({
-			group: 'connect-area',
-		});
-
-		$('ol.trash-code').sortable({
-			group: 'connect-area',
-		});
-	</script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>	
 	</body>
 </html>
