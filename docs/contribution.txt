@@ -34,6 +34,8 @@ MIT license
 Bootstrap v3.2.0
 --------------
 
+And refer to Dashboard example.
+
 http://getbootstrap.com
 
 Copyright 2011-2014 Twitter, Inc.
