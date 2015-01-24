@@ -143,3 +143,8 @@ a.trash:hover {
 	background-color: #9b59b6; /* Amethyst */
 	color: White;
 }
+
+/* code body visibility*/
+.code-body {
+	visibility: hidden;
+}

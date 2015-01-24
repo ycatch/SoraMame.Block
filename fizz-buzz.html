@@ -48,14 +48,14 @@
 						</li>
 						<li>
 							<a href="javascript:void(0)" onclick="SORAMAME_BLOCK.execCodeBlock(); return false;">
-								<i class="glyphicon glyphicon-play"></i>Run
+								<i class="glyphicon glyphicon-play"></i> Run
 							</a>
 						</li>
-						<li>
+<!-- 						<li>
 							<a href="#">
-								<i class="glyphicon glyphicon-stop"></i>Stop
+								<i class="glyphicon glyphicon-stop"></i> Stop
 							</a>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 			</div>
@@ -82,9 +82,12 @@
 										<div id="collapse11" class="panel-collapse collapse in">
 											<div class="panel-body">
 												<ol class="pallet-code block connect-area">
-													<li class="basic-block">input();</li>
-													<li class="basic-block">print</li>
-													<li class="comment-block">comment</li>
+													<li class="basic-block">INPUT();
+														<span class="code-body">input();</span></li>
+													<li class="basic-block">PRINT();
+														<span class="code-body">alert();</span></li>
+													<li class="comment-block"># comment
+														<span class="code-body">/* comment */</span></li>
 												</ol>
 											</div>
 										</div>
@@ -101,15 +104,24 @@
 										<div id="collapse12" class="panel-collapse collapse">
 											<div class="panel-body">
 												<ol class="pallet-code block connect-area">
-													<li class="if-block">if ()</li>
-													<li class="if-block">else if ()</li>
-													<li class="if-block">else</li>
-													<li class="if-block">if ()</li>
-													<li class="if-block">else if ()</li>
-													<li class="if-block">else</li>
-													<li class="if-block">if ()</li>
-													<li class="if-block">else if ()</li>
-													<li class="if-block">else</li>
+													<li class="if-block">IF ()
+														<span class="code-body">if ()</span></li>
+													<li class="if-block">ELSE IF ()
+														<span class="code-body">else if ()</span></li>
+													<li class="if-block">ELSE
+														<span class="code-body">else</span></li>
+													<li class="if-block">IF ()
+														<span class="code-body">if ()</span></li>
+													<li class="if-block">ELSE IF ()
+														<span class="code-body">else if ()</span></li>
+													<li class="if-block">ELSE
+														<span class="code-body">else</span></li>
+													<li class="if-block">IF ()
+														<span class="code-body">if ()</span></li>
+													<li class="if-block">ELSE IF ()
+														<span class="code-body">else if ()</span></li>
+													<li class="if-block">ELSE
+														<span class="code-body">else</span></li>
 												</ol>
 											</div>
 										</div>
@@ -126,8 +138,10 @@
 										<div id="collapse13" class="panel-collapse collapse">
 											<div class="panel-body">
 												<ol class="pallet-code block connect-area">
-													<li class="loop-block">while</li>
-													<li class="loop-block">for</li>
+													<li class="loop-block">WHILE
+														<span class="code-body">while</span></li>
+													<li class="loop-block">FOR
+														<span class="code-body">for</span></li>
 												</ol>
 											</div>
 										</div>
@@ -144,10 +158,12 @@
 										<div id="collapse14" class="panel-collapse collapse">
 											<div class="panel-body">
 												<ol class="pallet-code block connect-area">
-													<li class="var-block item-block">item0a</li>
+													<li class="var-block item-block">ITEM_A
+														<span class="code-body">item_a</span></li>
 												</ol>
 												<ol class="pallet-code block connect-area">
-													<li class="var-block item-block">item0b</li>
+													<li class="var-block item-block">ITEM_B
+														<span class="code-body">item_b</span></li>
 												</ol>
 											</div>
 										</div>
@@ -162,35 +178,52 @@
 						<!-- Main Edit Area -->
 						<div class="col-sm-7 col-sm-offset-3 col-md-8 col-md-offset-2 main">
 							<ol class="block connect-area serialize">
-								<li class="var-block">var msg = "Hello:" + name + "\n";</li>
-								<li class="var-block">var i=1;</li>
-								<li class="loop-block">while (i 
-									<= 15) { 
+								<li class="var-block">VAR MSG = "HELLO:" + NAME + "\n";
+									<span class="code-body">var msg = "Hello:" + name + "\n";</span></li>
+								<li class="var-block">VAR I = 1;
+									<span class="code-body">var i=1;</span></li>
+								<li class="loop-block">WHILE (I <= 15) { 
+									<span class="code-body">while (i <= 15) { </span>
 									<ol>
-										<li class="if-block">if((i % 3 == 0) && (i % 5 == 0)) { 
+										<li class="if-block">IF((I % 3 == 0) && (I % 5 == 0)) { 
+											<span class="code-body">if((i % 3 == 0) && (i % 5 == 0)) { </span>
 											<ol>
-												<li class="var-block">msg = msg + i + ": FizzBuzz\n";</li>
+												<li class="var-block">MSG = MSG + I + ": FIZZBUZZ\n";</li>
+												<span class="code-body">msg = msg + i + ": FizzBuzz\n";</span>
 											</ol>} 
+												<span class="code-body">} </span>
 										</li>
-										<li class="if-block">else if (i % 3 == 0){ 
+										<li class="if-block">ELSE IF (I % 3 == 0){ 
+											<span class="code-body">else if (i % 3 == 0){ </span>
 											<ol>
-												<li class="var-block">msg = msg + i + ": Fizz\n";</li>
+												<li class="var-block">MSG = MSG + I + ": FIZZ\n";</li>
+													<span class="code-body">msg = msg + i + ": Fizz\n";</span>
 											</ol>} 
+												<span class="code-body">} </span>
 										</li>
-										<li class="if-block">else if (i % 5 == 0){ 
+										<li class="if-block">ELSE IF (I % 5 == 0){ 
+											<span class="code-body">else if (i % 5 == 0){ </span>
 											<ol>
-												<li class="var-block">msg = msg + i + ": Buzz\n";</li>
+												<li class="var-block">MSG = MSG + I + ": BUZZ\n";
+												<span class="code-body">msg = msg + i + ": Buzz\n";</span></li>
 											</ol>} 
+												<span class="code-body">}</span>
 										</li>
-										<li class="if-block">else { 
+										<li class="if-block">ELSE {
+											<span class="code-body">else {</span>
 											<ol>
-												<li class="var-block">msg = msg + i + "\n" ;</li>
-											</ol>} 
+												<li class="var-block">MSG = MSG + I + "\n" ;
+													<span class="code-body">msg = msg + i + "\n" ;</span></li>
+											</ol>}
+												<span class="code-body">}</span>
 										</li>
-										<li class="var-block">i=i+1;</li>
-									</ol>} 
+										<li class="var-block">I=I+1;
+											<span class="code-body">i=i+1;</span></li>
+									</ol>}
+										<span class="code-body">}</span>
 								</li>
-								<li class="basic-block">alert(msg);</li>
+								<li class="basic-block">ALERT(MSG);
+									<span class="code-body">alert(msg);</span></li>
 							</ol>
 						</div>
 						<!-- end of Main Edit Area-->
