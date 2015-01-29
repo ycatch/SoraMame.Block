@@ -51,16 +51,10 @@
 								<i class="glyphicon glyphicon-play"></i> Run
 							</a>
 						</li>
-<!-- 						<li>
-							<a href="#">
-								<i class="glyphicon glyphicon-stop"></i> Stop
-							</a>
-						</li> -->
 					</ul>
 				</div>
 			</div>
-		</nav>
-		<!-- End Static navbar -->
+		</nav> <!-- End Static navbar -->
 		<div class="container-fluid">
 			<div class="row">
 				<!-- tab body -->
@@ -178,52 +172,52 @@
 						<!-- Main Edit Area -->
 						<div class="col-sm-7 col-sm-offset-3 col-md-8 col-md-offset-2 main">
 							<ol class="block connect-area serialize">
-								<li class="var-block">VAR MSG = "HELLO:" + NAME + "\n";
-									<span class="code-body">var msg = "Hello:" + name + "\n";</span></li>
-								<li class="var-block">VAR I = 1;
-									<span class="code-body">var i=1;</span></li>
-								<li class="loop-block">WHILE (I <= 15) { 
-									<span class="code-body">while (i <= 15) { </span>
+								<li class="var-block">var <span class="exp-body">msg = "Hello:" + name + "\n"</span>;
+									<span class="code-body">var <span class="code-exp">msg = "Hello:" + name + "\n"</span>;</span></li>
+								<li class="var-block">var <span class="exp-body">i = 1</span>;
+									<span class="code-body">var <span class="code-exp">i = 1</span>;</span></li>
+								<li class="loop-block">while(<span class="exp-body">i <= 15</span>) { 
+									<span class="code-body">while (<span class="code-exp">i <= 15</span>) { </span>
 									<ol>
-										<li class="if-block">IF((I % 3 == 0) && (I % 5 == 0)) { 
-											<span class="code-body">if((i % 3 == 0) && (i % 5 == 0)) { </span>
+										<li class="if-block">if(<span class="exp-body">(i % 3 == 0) && (i % 5 == 0)</span>) { 
+											<span class="code-body">if(<span class="code-exp">(i % 3 == 0) && (i % 5 == 0)</span>) { </span>
 											<ol>
-												<li class="var-block">MSG = MSG + I + ": FIZZBUZZ\n";</li>
-												<span class="code-body">msg = msg + i + ": FizzBuzz\n";</span>
+												<li class="var-block"><span class="exp-body">msg = msg + i + ": FizzBuzz\n"</span>;
+												<span class="code-body"><span class="code-exp">msg = msg + i + ": FizzBuzz\n"</span>;</span></li>
 											</ol>} 
 												<span class="code-body">} </span>
 										</li>
-										<li class="if-block">ELSE IF (I % 3 == 0){ 
-											<span class="code-body">else if (i % 3 == 0){ </span>
+										<li class="if-block">else if (<span class="exp-body">i % 3 == 0</span>){ 
+											<span class="code-body">else if (<span class="code-exp">i % 3 == 0</span>){ </span>
 											<ol>
-												<li class="var-block">MSG = MSG + I + ": FIZZ\n";</li>
-													<span class="code-body">msg = msg + i + ": Fizz\n";</span>
+												<li class="var-block"><span class="exp-body">msg = msg + i + ": Fizz\n"</span>;
+													<span class="code-body"><span class="code-exp">msg = msg + i + ": Fizz\n"</span>;</span></li>
 											</ol>} 
 												<span class="code-body">} </span>
 										</li>
-										<li class="if-block">ELSE IF (I % 5 == 0){ 
-											<span class="code-body">else if (i % 5 == 0){ </span>
+										<li class="if-block">else if (<span class="exp-body">i % 5 == 0</span>){ 
+											<span class="code-body">else if (<span class="code-exp">i % 5 == 0</span>){ </span>
 											<ol>
-												<li class="var-block">MSG = MSG + I + ": BUZZ\n";
-												<span class="code-body">msg = msg + i + ": Buzz\n";</span></li>
+												<li class="var-block"><span class="exp-body">msg = msg + i + ": Buzz\n"</span>;
+												<span class="code-body"><span class="code-exp">msg = msg + i + ": Buzz\n"</span>;</span></li>
 											</ol>} 
 												<span class="code-body">}</span>
 										</li>
-										<li class="if-block">ELSE {
+										<li class="if-block">else {
 											<span class="code-body">else {</span>
 											<ol>
-												<li class="var-block">MSG = MSG + I + "\n" ;
-													<span class="code-body">msg = msg + i + "\n" ;</span></li>
+												<li class="var-block"><span class="exp-body">msg = msg + i + "\n"</span>;
+													<span class="code-body"><span class="code-exp">msg = msg + i + "\n"</span>;</span></li>
 											</ol>}
 												<span class="code-body">}</span>
 										</li>
-										<li class="var-block">I=I+1;
-											<span class="code-body">i=i+1;</span></li>
+										<li class="var-block"><span class="exp-body">i = i + 1</span>;
+											<span class="code-body"><span class="code-exp">i = i + 1</span>;</span></li>
 									</ol>}
 										<span class="code-body">}</span>
 								</li>
-								<li class="basic-block">ALERT(MSG);
-									<span class="code-body">alert(msg);</span></li>
+								<li class="basic-block">alert(<span class="exp-body">msg</span>);
+									<span class="code-body">alert(<span class="code-exp">msg</span>);</span></li>
 							</ol>
 						</div>
 						<!-- end of Main Edit Area-->
@@ -252,6 +246,27 @@
 				<!-- end of tab body-->
 			</div>
 			<!-- end of row -->
+
+			<!-- Express Editor by Bootstrap3 Modals -->
+			<div id="expModalDialog" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Express Editor</h4>
+						</div>
+						<div class="modal-body">
+							<input type="text" id="expModalText" value="Input express">
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" onclick="SORAMAME_BLOCK.clodeExpDialog()">OK</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /.modal -->
+
 		</div>
 		<!-- end of container -->
 
