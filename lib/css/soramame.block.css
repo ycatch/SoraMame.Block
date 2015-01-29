@@ -144,6 +144,17 @@ a.trash:hover {
 	color: White;
 }
 
+/* Editable expression */
+.exp-body {
+	margin: 0px, 4px;
+	padding: 0px, 2px;
+	background-color: lightgray;
+	color: black;
+ 	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+}
+
 /* code body visibility*/
 .code-body {
 	visibility: hidden;
