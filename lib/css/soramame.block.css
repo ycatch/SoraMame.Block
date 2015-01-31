@@ -22,6 +22,7 @@
 	font-size: 12px;
 	font-weight: bold;
 	line-height: 1.4;
+	word-spacing: 0.2em;
 	border: 1px solid white;
 	border-radius: 4px;
 	-webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
@@ -71,17 +72,16 @@
 /* Editable expression */
 .block li span.exp-body {
 	margin: 0px, 2px;
-	padding: 0px, 4px, 0px, 8px;
+	padding-left: 0.2em;
 	background-color: white;
 	color: black;
- 	filter: alpha(opacity=80);
-	-moz-opacity: 0.8;
-	opacity: 0.8;
+ 	filter: alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
 	border: 2px inset gray;
 	border-radius: 3px;
 	-webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
-		  transition: border .25s linear, color .25s linear, background-color .25s linear;
-
+	transition: border .25s linear, color .25s linear, background-color .25s linear;
 	-webkit-font-smoothing: subpixel-antialiased;
 }
 
