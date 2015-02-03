@@ -17,8 +17,9 @@
 		<link href="lib/css/dashboard.css" rel="stylesheet">
 		<link href="lib/css/flat-ui.min.css" rel="stylesheet">
 		<link href="lib/css/soramame.block.css" rel="stylesheet">
-		<link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/ rel="stylesheet">
+		<link href="lib/css/highlight_default.css" rel="stylesheet">
 
+ -->
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -82,12 +83,14 @@
 										<div id="collapse11" class="panel-collapse collapse in">
 											<div class="panel-body">
 												<ol class="pallet-code block connect-area">
-													<li class="basic-block">INPUT();
-														<span class="code-body">input();</span></li>
-													<li class="basic-block">PRINT();
-														<span class="code-body">alert();</span></li>
-													<li class="comment-block"># comment
-														<span class="code-body">/* comment */</span></li>
+													<li class="basic-block">alert(<span class="exp-body">write exp</span>);
+														<span class="code-body">alert(<span class="code-exp"></span>);</span></li>
+													<li class="basic-block">prompt(<span class="exp-body"></span>);
+														<span class="code-body">prompt(<span class="code-exp"></span>);</span></li>
+													<li class="comment-block">confirm(<span class="exp-body"></span>);
+														<span class="code-body">confirm(<span class="code-exp"></span>);</span></li>
+													<li class="comment-block">/** <span class="exp-body">comment</span> */
+														<span class="code-body">/** <span class="code-exp">comment</span> */</span></li>
 												</ol>
 											</div>
 										</div>
@@ -301,7 +304,7 @@
 
 		<!-- Bootstrap core JavaScript ================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="lib/js/vendor/jquery.min.js"></script>
 		<script src="lib/js/bootstrap.min.js"></script>
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<script src="lib/js/ie10-viewport-bug-workaround.js"></script>
@@ -309,6 +312,6 @@
 		<script type="text/javascript" src="lib/js/jquery-sortable.js"></script>
 		<script type="text/javascript" src="lib/js/soramame.block.js"></script>
 		<script type="text/javascript" src="lib/js/beautify.js"></script>
-		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>	
+ 		<script type="text/javascript" src="lib/js/highlight.pack.js"></script>	
 	</body>
 </html>
