@@ -10,7 +10,7 @@
 .block {
 	margin: 0 0 9px 0;
 	min-height: 10px;
-   /*  width: 100%; */
+    width: 100%;
 }
 
 .block li {
@@ -45,6 +45,7 @@
     padding: 0;
     border-color: red;
     border-style: dotted;
+	z-index: 2000;
 }
 	
 .block li.placeholder:before {
@@ -58,6 +59,7 @@
 	border: 8px solid transparent;
 	border-left-color: red;
 	border-right: none;
+	z-index: 2000;
 }
 
 /** in-line Block type **/
