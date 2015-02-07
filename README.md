@@ -1,11 +1,11 @@
 SoraMame Block code editor
 ==========================
 
-SoraMame is block-type code editor for tiny script.
+SoraMame Block is block-type code editor for tiny script.
 
-- Block-type code editor without Blockly / Scratch.
-- Very small. I wrote just 70 lines Javascript.
-- SoraMame is using **jquery-sortable** for nested sortable created by Jonas von Andrian. **jquery-sortable** is another jQuery plugin not jQuery-UI sortable.
+- This is another Block-type code editor not Blockly / Scratch.
+- Very small. I wrote just only 100 lines Javascript code.
+- using **jquery-sortable** for nested sortable created by Jonas von Andrian. **jquery-sortable** is another jQuery plugin not jQuery-UI sortable.
 
 This project is now working in progress.
 
