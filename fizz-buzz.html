@@ -82,14 +82,38 @@
 										<div id="collapse11" class="panel-collapse collapse in">
 											<div class="panel-body">
 												<ol class="pallet-code block connect-area">
-													<li class="basic-block">alert(<span class="exp-body">"write exp"</span>);
-														<span class="code-body">alert(<span class="code-exp">"write exp"</span>);</span></li>
-													<li class="basic-block">prompt(<span class="exp-body"></span>);
-														<span class="code-body">prompt(<span class="code-exp"></span>);</span></li>
-													<li class="comment-block">confirm(<span class="exp-body"></span>);
-														<span class="code-body">confirm(<span class="code-exp"></span>);</span></li>
-													<li class="comment-block">/** <span class="exp-body">comment</span> */
-														<span class="code-body">/** <span class="code-exp">comment</span> */</span></li>
+													<li class="basic-block">
+														<div class="block-body">
+															alert(<span class="exp-body item1"></span>);</span>
+														</div>
+														<div class="code-body">
+															alert(<span class="exp-body item1"></span>);</span>
+														</div>
+													</li>
+													<li class="basic-block">
+														<div class="block-body">
+															var <span class="exp-body item1">input</span> = prompt(<span class="exp-body item2"></span>);</span>
+														</div>
+														<div class="code-body">
+															var <span class="exp-body item1">input</span> = prompt(<span class="exp-body item2"></span>);</span>
+														</div>
+													</li>
+													<li class="basic-block">
+														<div class="block-body">
+															var <span class="exp-body item1">flag</span> = confirm(<span class="exp-body item2"></span>);</span>
+														</div>
+														<div class="code-body">
+															var <span class="exp-body item1">flag</span> = confirm(<span class="exp-body item2"></span>);</span>
+														</div>
+													</li>
+													<li class="comment-block">
+														<div class="block-body">
+															/** <span class="exp-body item1">comment</span></span> */</span>
+														</div>
+														<div class="code-body">
+															/** <span class="exp-body item1">comment</span></span> */</span>
+														</div>
+													</li>
 												</ol>
 											</div>
 										</div>
@@ -168,52 +192,150 @@
 						<!-- Main Edit Area -->
 						<div class="col-xs-7 col-xs-offset-3 main">
 							<ol class="block connect-area serialize">
-								<li class="var-block">var <span class="exp-body">msg = "Hello:" + name + "\n"</span>;
-									<span class="code-body">var <span class="code-exp">msg = "Hello:" + name + "\n"</span>;</span></li>
-								<li class="var-block">var <span class="exp-body">i = 1</span>;
-									<span class="code-body">var <span class="code-exp">i = 1</span>;</span></li>
-								<li class="loop-block">while(<span class="exp-body">i <= 15</span>) { 
-									<span class="code-body">while (<span class="code-exp">i <= 15</span>) { </span>
-									<ol>
-										<li class="if-block">if(<span class="exp-body">(i % 3 == 0) && (i % 5 == 0)</span>) { 
-											<span class="code-body">if(<span class="code-exp">(i % 3 == 0) && (i % 5 == 0)</span>) { </span>
-											<ol>
-												<li class="var-block"><span class="exp-body">msg = msg + i + ": FizzBuzz\n"</span>;
-												<span class="code-body"><span class="code-exp">msg = msg + i + ": FizzBuzz\n"</span>;</span></li>
-											</ol>} 
-												<span class="code-body">} </span>
-										</li>
-										<li class="if-block">else if (<span class="exp-body">i % 3 == 0</span>){ 
-											<span class="code-body">else if (<span class="code-exp">i % 3 == 0</span>){ </span>
-											<ol>
-												<li class="var-block"><span class="exp-body">msg = msg + i + ": Fizz\n"</span>;
-													<span class="code-body"><span class="code-exp">msg = msg + i + ": Fizz\n"</span>;</span></li>
-											</ol>} 
-												<span class="code-body">} </span>
-										</li>
-										<li class="if-block">else if (<span class="exp-body">i % 5 == 0</span>){ 
-											<span class="code-body">else if (<span class="code-exp">i % 5 == 0</span>){ </span>
-											<ol>
-												<li class="var-block"><span class="exp-body">msg = msg + i + ": Buzz\n"</span>;
-												<span class="code-body"><span class="code-exp">msg = msg + i + ": Buzz\n"</span>;</span></li>
-											</ol>} 
-												<span class="code-body">}</span>
-										</li>
-										<li class="if-block">else {
-											<span class="code-body">else {</span>
-											<ol>
-												<li class="var-block"><span class="exp-body">msg = msg + i + "\n"</span>;
-													<span class="code-body"><span class="code-exp">msg = msg + i + "\n"</span>;</span></li>
-											</ol>}
-												<span class="code-body">}</span>
-										</li>
-										<li class="var-block"><span class="exp-body">i = i + 1</span>;
-											<span class="code-body"><span class="code-exp">i = i + 1</span>;</span></li>
-									</ol>}
-										<span class="code-body">}</span>
+								<li class="var-block">
+									<div class="block-body">
+										var <span class="exp-body item1">msg = "Hello:" + name + "\n"</span>;</span>
+									</div>
+									<div class="code-body">
+										var <span class="exp-body item1">msg = "Hello:" + name + "\n"</span>;</span>
+									</div>
 								</li>
-								<li class="basic-block">alert(<span class="exp-body">msg</span>);
-									<span class="code-body">alert(<span class="code-exp">msg</span>);</span></li>
+								<li class="var-block">
+									<div class="block-body">
+										var <span class="exp-body item1">i = 1</span>;</span>
+									</div>
+									<div class="code-body">
+										var <span class="exp-body item1">i = 1</span>;</span>
+									</div>
+								</li>
+								<li class="loop-block">
+									<div class="block-body">
+										while(<span class="exp-body item1">i <= 15</span>) {</span>
+									</div>
+									<div class="code-body">
+										while(<span class="exp-body item1">i <= 15</span>) {</span>
+									</div>
+									<ol>
+									<li class="if-block">
+										<div class="block-body">
+											if(<span class="exp-body item1">(i % 3 === 0) && (i % 5 === 0)</span>) {</span>
+										</div>
+										<div class="code-body">
+											if(<span class="exp-body item1">(i % 3 === 0) && (i % 5 === 0)</span>) {</span>
+										</div>
+											<ol>
+											<li class="var-block">
+												<div class="block-body">
+													<span class="exp-body item1">msg = msg + i + ": FizzBuzz\n"</span>;</span>
+												</div>
+												<div class="code-body">
+													<span class="exp-body item1">msg = msg + i + ": FizzBuzz\n"</span>;</span>
+												</div>
+											</li>
+											</ol>
+										<div class="block-body">
+											}</span>
+										</div>
+										<div class="code-body">
+											}</span>
+										</div>
+									</li>
+									<li class="if-block">
+										<div class="block-body">
+											else if(<span class="exp-body item1">(i % 3 === 0)</span>) {</span>
+										</div>
+										<div class="code-body">
+											else if(<span class="exp-body item1">(i % 3 === 0)</span>) {</span>
+										</div>
+											<ol>
+											<li class="var-block">
+												<div class="block-body">
+													<span class="exp-body item1">msg = msg + i + ": Fizz\n"</span>;</span>
+												</div>
+												<div class="code-body">
+													<span class="exp-body item1">msg = msg + i + ": Fizz\n"</span>;</span>
+												</div>
+											</li>
+											</ol>
+										<div class="block-body">
+											}</span>
+										</div>
+										<div class="code-body">
+											}</span>
+										</div>
+									</li>
+									<li class="if-block">
+										<div class="block-body">
+											else if(<span class="exp-body item1">(i % 5 === 0)</span>) {</span>
+										</div>
+										<div class="code-body">
+											else if(<span class="exp-body item1">(i % 5 === 0)</span>) {</span>
+										</div>
+											<ol>
+											<li class="var-block">
+												<div class="block-body">
+													<span class="exp-body item1">msg = msg + i + ": Buzz\n"</span>;</span>
+												</div>
+												<div class="code-body">
+													<span class="exp-body item1">msg = msg + i + ": Buzz\n"</span>;</span>
+												</div>
+											</li>
+											</ol>
+										<div class="block-body">
+											}</span>
+										</div>
+										<div class="code-body">
+											}</span>
+										</div>
+									</li>
+									<li class="if-block">
+										<div class="block-body">
+											else {</span>
+										</div>
+										<div class="code-body">
+											else {</span>
+										</div>
+											<ol>
+											<li class="var-block">
+												<div class="block-body">
+													<span class="exp-body item1">msg = msg + i + "\n"</span>;</span>
+												</div>
+												<div class="code-body">
+													<span class="exp-body item1">msg = msg + i + "\n"</span>;</span>
+												</div>
+											</li>
+											</ol>
+										<div class="block-body">
+											}</span>
+										</div>
+										<div class="code-body">
+											}</span>
+										</div>
+									</li>
+									<li class="var-block">
+										<div class="block-body">
+											var <span class="exp-body item1">i = i + 1</span>;</span>
+										</div>
+										<div class="code-body">
+											var <span class="exp-body item1">i = i + 1</span>;</span>
+										</div>
+									</li>
+									</ol>
+									<div class="block-body">
+										}</span>
+									</div>
+									<div class="code-body">
+										}</span>
+									</div>
+								</li>
+								<li class="basic-block">
+									<div class="block-body">
+										alert(<span class="exp-body item1">msg</span>);</span>
+									</div>
+									<div class="code-body">
+										alert(<span class="exp-body item1">msg</span>);</span>
+									</div>
+								</li>
 							</ol>
 						</div>
 						<!-- end of Main Edit Area-->

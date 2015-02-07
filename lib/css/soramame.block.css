@@ -8,7 +8,7 @@
 }
 
 .block {
-	margin: 0 0 9px 0;
+	margin: 0 0 4px 0;
 	min-height: 10px;
     width: 100%;
 }
@@ -70,8 +70,8 @@
     padding: 0px;
 }
 
-/* Editable expression */
-.block li span.exp-body {
+/* Editable expression area*/
+span.exp-body {
 	cursor: text;
 	margin: 0px;
 	padding: 0em 0.2em;
@@ -91,11 +91,11 @@
 /** Code-Pallete **/
 
 ol.pallet-code {
-	padding-left: 0
+	padding-left: 0;
 }
 
 .panel-default {
-	margin: 8px
+	margin: 0;
 }
 
 .panel-heading .accordion-toggle:after {
@@ -167,5 +167,5 @@ a.trash:hover {
 
 /* code body visibility*/
 .code-body {
-	visibility: hidden;
+	display: none;
 }
