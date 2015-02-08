@@ -95,7 +95,7 @@ ol.pallet-code {
 }
 
 .panel-default {
-	margin: 0;
+	margin: 10px auto;
 }
 
 .panel-heading .accordion-toggle:after {
