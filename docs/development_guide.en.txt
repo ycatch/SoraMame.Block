@@ -110,7 +110,8 @@ The folding of each group use the Collapse of Bootstrap.
 
 Block is composed of <li> tag and can drag and drop while nested by jquery-sortable.
 
-The <li> element has text to be displayed on the block (class = "block-body") and text to be output for code(class = "code-body"). If you need convert-logic from block-body to code-body, it is necessary to own description.
+The <li> element has text to be displayed on the block (class = "block-body") and text to be output for code(class = "code-body").
+If you need convert-logic from block-body to code-body, it is necessary to own description.
 
 Text of <span> element with a class = "exp-body" edit in Express Line Editor.
 
