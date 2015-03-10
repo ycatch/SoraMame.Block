@@ -1,13 +1,8 @@
+Libraries
+==========
 
-Tools, Library & Documents
-===============
+## jquery-sortable
 
-thank you all.
-
-
-
-jquery-sortable
---------------
 v0.9.4
 
 This is nested sortable most important parts of SoraMame.
@@ -20,9 +15,8 @@ jquery-sortable.js is released under the Modified BSD License.
 http://johnny.github.io/jquery-sortable/
 
 
+## jquery
 
-jquery
---------------
 http://jquery.com/
 
 Copyright 2014 The jQuery Foundation
@@ -30,9 +24,7 @@ Copyright 2014 The jQuery Foundation
 MIT license
 
 
-
-Bootstrap v3.2.0
---------------
+## Bootstrap v3.2.0
 
 And refer to Dashboard example.
 
@@ -43,9 +35,8 @@ Copyright 2011-2014 Twitter, Inc.
 Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
 
+## Flat UI Free v2.2.0 
 
-Flat UI Free v2.2.0 
---------------
 Free User Interface Kit
 Copyright 2013-2014 Designmodo, Inc.
 
@@ -53,12 +44,10 @@ http://designmodo.github.io/Flat-UI/
 
 Flat UI Free is licensed under a Creative Commons Attribution 3.0 Unported (CC BY 3.0)  (http://creativecommons.org/licenses/by/3.0/) and MIT License - http://opensource.org/licenses/mit-license.html.
 
-You are allowed to use these elements anywhere you want, however weÅfll highly appreciate if you will link to our [website](http://designmodo.com).
+You are allowed to use these elements anywhere you want, however we‚Äôll highly appreciate if you will link to our [website](http://designmodo.com).
 
 
-
-js-beautify
-------------
+## js-beautify
 
 Copyright (c) 2007-2013 Einar Lielmanis and contributors.
 
@@ -68,9 +57,10 @@ http://jsbeautifier.org/
 https://github.com/beautify-web/js-beautify
 
 
-highlight.js
-------------
+## highlight.js
 
 Syntax highlighting for the Web.
 
 https://highlightjs.org/
+
+

@@ -1,0 +1,188 @@
+SoraMame Block Development Guide
+=================================
+
+SoraMame Blockは、ビジュアルプログラミング言語を開発するときに利用できる、Webフロントエンドのモックアップである。
+
+このドキュメントでは、SoraMame Blockを利用したWebアプリの開発者のために、内部構成を解説する。
+
+
+
+Description
+------------
+
+SoraMame Blockは、100行ほどのJavascriptコードと、各種OSSライブラリで構成されている。Webページのデザインと主なUIには、BootstrapとFlat UIを使っている。ブロックのドラッグ＆ドロップには、jquery-sortableを使っている。jqueryプラグインであるjquery-sortableは、ネストした要素をドラッグ&ドロップできる。
+
+
+Files
+------------
+
+ここでは、SoraMame Blockを構成する主なファイルについて解説する。
+
+* 主なファイル
+
+SoraMame Blockは、次のようなファイル構成を持っている。
+
+
+ SoraMame Block
+ | 
+ +---docs : Documents
+ | 
+ +---game : Examples
+ |   | 
+ |   +---assets
+ |   |   +---audio
+ |   |   +---images
+ |   |   \---ui
+ |   |       \---icons
+ |   |
+ |   \---js : JavaScript files
+ | 
+ \---lib : SoraMame Block's Library files
+     |
+     +---css
+     |   \---vendor
+     |
+     +---fonts
+     |   +---glyphicons
+     |   \---lato
+     |
+     +---img
+     |   +---icons
+     |   |   +---png
+     |   |   \---svg
+     |   +---login
+     |   \---tile
+     |
+     \---js : JavaScript files
+         |
+         \---vendor
+
+
+最も重要なファイルは、次の3つのファイルである
+
+- index.html : Main html file with block, tool-pallet and dialogs.
+- lib\js\soramame.block.js : JavaScript of soramame.block
+- lib\css\soramame.block.css : CSS of soramame.block and jquery-sortable
+
+
+Functions
+------------
+
+ここでは、SoraMame Blockの主な機能とコードの対応について解説する。
+
+
+### Design and Functions
+
+ナビゲーションバーには、4つのタブ(Block, Code, Run, Help)があります。
+ブロックタブを選択すると、コードを編集する画面を呼び出す。
+ブロック内の式をクリックすると、数式エディタがポップアップ表示される。
+
+
+### Tabs
+
+最上部には、4つのタブを持つナビゲーションバーがある。
+各タブは、エリアを変更したり、コードを実行したりできる。
+タブ付きのナビゲーションバーには、ブートストラップを使用している。
+
+
+### "Block" tab
+
+Blockタブは、コードを編集する画面を呼び出す。Blockタブを選択すると、ツールパレット・メイン編集・ゴミ箱という3つのエリアが表示される。
+この3つのエリアは、Bootstrapのグリッドで分割している。
+
+
+### Tool Pallet area
+
+コードを組み立てるためのブロックは、ツールパレットにある。
+ツールパレットで、各ブロックは、グループごとに折りたたまれている。
+ブロックは、ツールパレットからメイン編集エリアにドラッグ＆ドロップできる。
+ツールパレットには、BootstrapのSidebar Navを使っている。
+グループごとの折りたたみには、BootstrapのCollapseを使っている。
+
+
+### Block
+
+ブロックは、<li>タグで構成されており、jquery-sortableにより、ネストしたままドラッグ＆ドロップできる。
+
+この<li>タグによる要素は、、ブロックとして表示するテキスト(class = "block-body")と、変換時にコードとして出力するテキスト(class = "code-body")を持っている。block-bodyからcode-bodyへ、テキストを変換するロジックは、独自に記述する必要がある。
+
+class="exp-body"を持つ<span>要素のテキストは、数式エディタで編集できる。
+
+ブロック内に複数の数式がある場合、数式ごとにclass="item1", "item2"というように、クラスを割り当てる。
+
+ Example
+
+ <li class="basic-block">
+ 	<div class="block-body">
+ 		var <span class="exp-body item1">input</span> = prompt(<span class="exp-body item2"></span>);
+ 	</div>
+ 	<div class="code-body">
+ 		var <span class="exp-body item1">input</span> = prompt(<span class="exp-body item2"></span>);
+ 	</div>
+ </li>
+
+
+
+### Main editing area
+
+メイン編集エリアは、ブロックスタイルでコードを編集する画面である。コードを表すブロックをドラッグ＆ドロップで配置できる。ここに配置されたブロックがコードを持ち、"Code"タブをクリックすると、そのコードだけが表示される。
+
+
+### Trash Can area
+
+メイン編集エリアにある不要なブロックは、ゴミ箱にドラッグ＆ドロップして捨てることができる。ゴミ箱に捨てたブロックは、ゴミ箱のすぐ下に表示される。再度、メイン編集エリアに移動できる。
+
+ゴミ箱をダブルクリックすると、捨てたブロックは完全に削除される。
+
+
+### 'Code' tab
+
+"Code"タブをクリックすると、メイン編集エリアにあるブロックのコードが表示される。
+
+ブロックが持つコードは、js-beautifyで整形されたあと、highlight.jsでハイライト表示される。
+
+
+### 'Run' tab
+
+"Run"タブをクリックすると、メイン編集エリアにあるブロックのコードを実行できる。
+
+実行するコードは、JavaScriptのFunctionオブジェクトで本体のコードに取り込まれる。
+
+
+### Express line Editor
+
+ブロックの数式部分をクリックすると、数式エディタがポップアップする。
+
+この数式エディタで、数式部分を編集できる。
+
+数式エディタには、BootstrapのModals機能を使っており、そのhtmlは、index.htmlの一部として記述している。
+
+
+### 'Help' tab
+
+"Help"タブをクリックすると、SoraMame.Blockのオンラインヘルプがポップアップする。
+
+オンラインヘルプには、BootstrapのModals機能を使っており、そのhtmlは、index.htmlの一部として記述している。
+
+
+
+API
+---------
+
+
+### SORAMAME_BLOCK.clearTrash
+
+ゴミ箱を空にする。
+
+
+### SORAMAME_BLOCK.setSerializeBlock
+
+ブロック編集エリアのコードを文字列として並べて、コードページに表示する。
+
+
+### SORAMAME_BLOCK.execCodeBlock
+
+ブロック編集エリアのコードを実行する。
+
+
+

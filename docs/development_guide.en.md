@@ -1,0 +1,196 @@
+SoraMame Block Development Guide
+=================================
+
+SoraMame Block is a mock-up of the Web front end for developing a visual programming language. 
+
+This document explain the internal structure for development of Web apps using SoraMame Block.
+
+
+
+Description
+------------
+
+SoraMame Block has just only 100 lines of Javascript code and some OSS libraries.
+The main UI and design of Web pages are using the Bootstrap and Flat UI. 
+Block of drag-and-drop, are using jquery-sortable. jquery-sortable is jquery plug-in, can drag and drop the nested elements.
+
+
+
+Files
+------------
+
+This section explain about files of SoraMame Block.
+
+
+* File structure
+
+This is file structure of SoraMame Block.
+
+
+ SoraMame Block
+ | 
+ +---docs : Documents
+ | 
+ +---game : Examples
+ |   | 
+ |   +---assets
+ |   |   +---audio
+ |   |   +---images
+ |   |   \---ui
+ |   |       \---icons
+ |   |
+ |   \---js : JavaScript files
+ | 
+ \---lib : SoraMame Block's Library files
+     |
+     +---css
+     |   \---vendor
+     |
+     +---fonts
+     |   +---glyphicons
+     |   \---lato
+     |
+     +---img
+     |   +---icons
+     |   |   +---png
+     |   |   \---svg
+     |   +---login
+     |   \---tile
+     |
+     \---js : JavaScript files
+         |
+         \---vendor
+
+There are most important files of SoraMame Block.
+
+- index.html : Main html file with block, tool-pallet and dialogs.
+- lib\js\soramame.block.js : JavaScript of soramame.block
+- lib\css\soramame.block.css : CSS of soramame.block and jquery-sortable
+
+
+
+Functions
+------------
+
+This section explain about functions and code of SoraMame Block.
+
+
+### Page Design
+
+- Navbar has 4 tabs at the top - Block, Code, Run and Help.
+- Select of Block tab display 3 areas - tool palette, main editing and trash-can.
+- Click expression in Block, Express line editor will pop up.
+
+
+### Tabs
+
+There is a Navbar at the top with 4 tabs.
+Each tab is changing area or running code.
+Navbar with tabs use bootstrap.
+
+
+### "Block" tab
+
+Block tab call the screen to edit the code-block. Select of Block tab display three areas - tool palette, main editing and trash-can.
+
+These three areas, I have split the grid of Bootstrap.
+
+
+### Tool Pallet area
+
+Blocks for assembling the code is in the tool palette.
+Code group fold each block of the tool palette.
+Block can drag-and-drop from the tool palette to the main editing area.
+The tool palette use the Sidebar Nav of Bootstrap.
+The folding of each group use the Collapse of Bootstrap.
+
+
+
+### Block
+
+Block is composed of <li> tag and can drag and drop while nested by jquery-sortable.
+
+The <li> element has text to be displayed on the block (class = "block-body") and text to be output for code(class = "code-body"). If you need convert-logic from block-body to code-body, it is necessary to own description.
+
+Text of <span> element with a class = "exp-body" edit in Express Line Editor.
+
+
+If there are multiple expressions in a block, assign classes for each expression class = "item1", "item2".
+
+
+ Example
+
+ <li class="basic-block">
+ 	<div class="block-body">
+ 		var <span class="exp-body item1">input</span> = prompt(<span class="exp-body item2"></span>);
+ 	</div>
+ 	<div class="code-body">
+ 		var <span class="exp-body item1">input</span> = prompt(<span class="exp-body item2"></span>);
+ 	</div>
+ </li>
+
+
+
+### Main editing area
+
+Main editing area is a page to edit the code in the block style. 
+In this area you can place a code-block by drag-and-drop. 
+Code-block has text of code.
+Click the "Code" tab, display only the code.
+
+
+
+### Trash Can area
+
+Unnecessary block is discarded in the trash-can by drag-and-drop.
+Discarded block is displayed just below the trash-can.
+This block can be moved to the main editing area again.
+If you double-click the trash-can, discarded block is completely deleted.
+
+
+### 'Code' tab
+
+Click the "Code" tab, display only the code in the main editing area.
+Code of the block is alignment by js-beautify and highlight by highlight.js.
+
+
+### 'Run' tab
+
+Click the "Run" tab, execute the code in the main editing area.
+Executing code is becoming a part of main program by JavaScript Function object.
+
+
+### Express line Editor
+
+Click the expression of the block, will pop up Express line Editor.
+You can edit expression by this Express line Editor.
+Express line Editor use Bootstrap Modals include index.html
+
+
+### 'Help' tab
+
+Click the"Help" tabs, will pop up Online help dialog.
+Online help use Bootstrap Modals include index.html
+
+
+
+API
+---------
+
+
+### SORAMAME_BLOCK.clearTrash
+
+Clear trash-can.
+
+
+### SORAMAME_BLOCK.setSerializeBlock
+
+Serialize code of blocks in main editing area and set on code tab.
+
+
+### SORAMAME_BLOCK.execCodeBlock
+
+Execute code of blocks in main editing area.
+
+
+

@@ -10,12 +10,14 @@ SoraMame block is block-type code editor mock-up for tiny script.
 This project is now working in progress.
 
 
+
 License
--------
+--------
 
 Copyright 2014-2015 Yutaka Kachi released under MIT License.
 
 see LICENSE file or http://opensource.org/licenses/MIT
+
 
 
 Demo
@@ -28,12 +30,26 @@ Demo
   - http://www.catch.jp/program/soramame_block/
 
 
-Relational Projects and Contritutions
----------------------------------------
+
+Development_guide
+------------------
+
+* English
+  - https://github.com/ycatch/SoraMame.Block/blob/master/docs/development_guide.en.md
+* Japanese
+  - https://github.com/ycatch/SoraMame.Block/blob/master/docs/development_guide.ja.md
+
+
+
+Relational Projects and Libraries
+-----------------------------------
 
 * jquery-sortable
   - http://johnny.github.io/jquery-sortable/
 * games-phaser-getaway
   - https://github.com/ycatch/games-phaser-getaway
-* contributors
-  - https://github.com/ycatch/SoraMame.Block/blob/master/docs/contribution.txt
+* Libraries
+  - https://github.com/ycatch/SoraMame.Block/blob/master/docs/libraries.md
+
+
+
