@@ -35,9 +35,9 @@ Development_guide
 ------------------
 
 * English
-  - https://github.com/ycatch/SoraMame.Block/blob/master/docs/development_guide.en.md
+  - https://github.com/ycatch/SoraMame.Block/blob/master/docs/development_guide.en.txt
 * Japanese
-  - https://github.com/ycatch/SoraMame.Block/blob/master/docs/development_guide.ja.md
+  - https://github.com/ycatch/SoraMame.Block/blob/master/docs/development_guide.ja.txt
 
 
 
