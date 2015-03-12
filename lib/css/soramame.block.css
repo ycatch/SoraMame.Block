@@ -164,6 +164,11 @@ a.trash:hover {
 	color: White;
 }
 
+/* Function */
+.func-block {
+	background-color: Orange; /* Orange */
+	color: White;
+}
 
 /* code body visibility*/
 .code-body {
