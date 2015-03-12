@@ -1,4 +1,6 @@
-/** HTML5 canvas turtle graphics
+/** Turtle example for SoraMame.Block
+	Copyright 2015 Yutaka Kachi under MIT License
+	Modfy from HTML5 canvas turtle graphics
     Copyright 2012 Hannes Hirzel under CC by 3.0
 	http://cnx.org/contents/85310cba-5bbc-4f1d-b437-778a1aef9d02@2/Turtle_graphics_with_the_HTML5
  */
@@ -88,18 +90,5 @@ turtle.angle = function () {
     return this.angleInRadians * 180.0 / Math.PI;
 };
 
-// =====================================================================================
-// Some example definitions
-// =====================================================================================
-
-turtle.hexagon = function (length) {
-    var i;
-    for (i = 1; i <= 12; i++) {
-        turtle.forward(length);
-		length = length + 3;
-        turtle.left(60);
-
-    }
-};
 
 

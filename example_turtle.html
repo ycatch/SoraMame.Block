@@ -487,14 +487,6 @@
 										turtle.penColor = color.<span class="exp-body item1">blue</span>;
 									</div>
 								</li>
-								<li class="func-block">
-									<div class="block-body">
-										<span class="exp-body item1">hexagon</span>(<span class="exp-body item2">5</span>);
-									</div>
-									<div class="code-body">
-										turtle.<span class="exp-body item1">hexagon</span>(<span class="exp-body item2">5</span>);
-									</div>
-								</li>
 								<li class="comment-block">
 									<div class="block-body">
 										/** Set Drawing */
@@ -503,68 +495,60 @@
 										/** Set Drawing */
 									</div>
 								</li>
-								<li class="func-block">
+								<li class="var-block">
 									<div class="block-body">
-										<span class="exp-body item1">hexagon</span> = function (<span class="exp-body item2">step</span>) {
+										var <span class="exp-body item1">step = 20</span>;
 									</div>
 									<div class="code-body">
-										turtle.<span class="exp-body item1">hexagon</span> = function (<span class="exp-body item2">step</span>) {
+										var <span class="exp-body item1">step = 20</span>;
+									</div>
+								</li>
+								<li class="var-block">
+									<div class="block-body">
+										var <span class="exp-body item1">length = 5</span>;
+									</div>
+									<div class="code-body">
+										var <span class="exp-body item1">length = 5</span>;
+									</div>
+								</li>
+								<li class="var-block">
+									<div class="block-body">
+										var <span class="exp-body item1">i</span>;
+									</div>
+									<div class="code-body">
+										var <span class="exp-body item1">i</span>;
+									</div>
+								</li>
+								<li class="loop-block">
+									<div class="block-body">
+										for(<span class="exp-body item1">i = 1; i <= step; i++</span>) {
+									</div>
+									<div class="code-body">
+										for(<span class="exp-body item1">i = 1; i <= step; i++</span>) {
 									</div>
 									<ol>
-										<li class="var-block">
+										<li class="turtle-block">
 											<div class="block-body">
-												var <span class="exp-body item1">length = 5</span>;
+												forward(<span class="exp-body item1">length</span>);
 											</div>
 											<div class="code-body">
-												var <span class="exp-body item1">length = 5</span>;
+												turtle.forward(<span class="exp-body item1">length</span>);
 											</div>
 										</li>
 										<li class="var-block">
 											<div class="block-body">
-												var <span class="exp-body item1">i</span>;
+												length = <span class="exp-body item1">length + 3</span>;
 											</div>
 											<div class="code-body">
-												var <span class="exp-body item1">i</span>;
+												length = <span class="exp-body item1">length + 3</span>;
 											</div>
 										</li>
-										<li class="loop-block">
+										<li class="turtle-block">
 											<div class="block-body">
-												for(<span class="exp-body item1">i = 1; i <= step; i++</span>) {
+												left(<span class="exp-body item1">60</span>);
 											</div>
 											<div class="code-body">
-												for(<span class="exp-body item1">i = 1; i <= step; i++</span>) {
-											</div>
-											<ol>
-												<li class="turtle-block">
-													<div class="block-body">
-														forward(<span class="exp-body item1">length</span>);
-													</div>
-													<div class="code-body">
-														turtle.forward(<span class="exp-body item1">length</span>);
-													</div>
-												</li>
-												<li class="var-block">
-													<div class="block-body">
-														length = <span class="exp-body item1">length + 3</span>;
-													</div>
-													<div class="code-body">
-														length = <span class="exp-body item1">length + 3</span>;
-													</div>
-												</li>
-												<li class="turtle-block">
-													<div class="block-body">
-														left(<span class="exp-body item1">60</span>);
-													</div>
-													<div class="code-body">
-														turtle.left(<span class="exp-body item1">60</span>);
-													</div>
-												</li>
-											</ol>
-											<div class="block-body">
-												}
-											</div>
-											<div class="code-body">
-												}
+												turtle.left(<span class="exp-body item1">60</span>);
 											</div>
 										</li>
 									</ol>

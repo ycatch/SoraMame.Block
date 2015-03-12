@@ -64,3 +64,11 @@ Syntax highlighting for the Web.
 https://highlightjs.org/
 
 
+## HTML5 canvas turtle graphics
+
+Copyright 2012 Hannes Hirzel
+Creative Commons Attribution License (by 3.0)
+
+http://cnx.org/contents/85310cba-5bbc-4f1d-b437-778a1aef9d02@2/Turtle_graphics_with_the_HTML5
+
+
