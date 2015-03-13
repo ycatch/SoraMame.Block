@@ -99,4 +99,8 @@
 	}
 })()
 
+TURTLE.commnd = {
+	msg: "Hello Turtle"
+};
+
 

@@ -27,7 +27,7 @@
 
 		<style>
 			canvas {border: 1px dotted #564b47;}
-			.turtle-block {background-color: Blue; color: White;}
+			.turtle-block {background-color: #e67e22; color: White;}
 		</style>
 	</head>
 	<body>
@@ -94,7 +94,7 @@
 															x = <span class="exp-body item1">0</span>;
 														</div>
 														<div class="code-body">
-															turtle.x = <span class="exp-body item1">0</span>;
+															TURTLE.x = <span class="exp-body item1">0</span>;
 														</div>
 													</li>
 													<li class="turtle-block">
@@ -102,7 +102,7 @@
 															y = <span class="exp-body item1">0</span>;
 														</div>
 														<div class="code-body">
-															turtle.y = <span class="exp-body item1">0</span>;
+															TURTLE.y = <span class="exp-body item1">0</span>;
 														</div>
 													</li>
 													<li class="turtle-block">
@@ -110,7 +110,7 @@
 															forward(<span class="exp-body item1">10</span>);
 														</div>
 														<div class="code-body">
-															turtle.forward(<span class="exp-body item1">10</span>);
+															TURTLE.forward(<span class="exp-body item1">10</span>);
 														</div>
 													</li>
 													<li class="turtle-block">
@@ -118,7 +118,7 @@
 															back(<span class="exp-body item1">10</span>);
 														</div>
 														<div class="code-body">
-															turtle.back(<span class="exp-body item1">10</span>);
+															TURTLE.back(<span class="exp-body item1">10</span>);
 														</div>
 													</li>
 													<li class="turtle-block">
@@ -126,7 +126,7 @@
 															right(<span class="exp-body item1">90</span>);
 														</div>
 														<div class="code-body">
-															turtle.right(<span class="exp-body item1">90</span>);
+															TURTLE.right(<span class="exp-body item1">90</span>);
 														</div>
 													</li>
 													<li class="turtle-block">
@@ -134,7 +134,7 @@
 															left(<span class="exp-body item1">90</span>);
 														</div>
 														<div class="code-body">
-															turtle.left(<span class="exp-body item1">90</span>);
+															TURTLE.left(<span class="exp-body item1">90</span>);
 														</div>
 													</li>
 													<li class="turtle-block">
@@ -142,7 +142,7 @@
 															penDown = <span class="exp-body item1">true</span>;
 														</div>
 														<div class="code-body">
-															turtle.penDown = <span class="exp-body item1">true</span>;
+															TURTLE.penDown = <span class="exp-body item1">true</span>;
 														</div>
 													</li>
 													<li class="turtle-block">
@@ -150,7 +150,7 @@
 															penColor = <span class="exp-body item1">red</span>;
 														</div>
 														<div class="code-body">
-															turtle.penColor = color.<span class="exp-body item1">red</span>;
+															TURTLE.penColor = TURTLE.color.<span class="exp-body item1">red</span>;
 														</div>
 													</li>
 												</ol>
@@ -403,18 +403,18 @@
 												<ol class="pallet-code block connect-area">
 													<li class="func-block">
 														<div class="block-body">
-															<span class="exp-body item1">func-name</span>(<span class="exp-body item2">5</span>);
+															<span class="exp-body item1">funcName</span>(<span class="exp-body item2"></span>);
 														</div>
 														<div class="code-body">
-															turtle.<span class="exp-body item1">func-name</span>(<span class="exp-body item2">5</span>);
+															TURTLE.commnd.<span class="exp-body item1">funcName</span>(<span class="exp-body item2"></span>);
 														</div>
 													</li>
 													<li class="func-block">
 														<div class="block-body">
-															<span class="exp-body item1">func-name</span> = function (<span class="exp-body item2">length</span>) {
+															<span class="exp-body item1">funcName</span> = function (<span class="exp-body item2"></span>) {
 														</div>
 														<div class="code-body">
-															turtle.<span class="exp-body item1">func-name</span> = function (<span class="exp-body item2">length</span>) {
+															TURTLE.commnd.<span class="exp-body item1">funcName</span> = function (<span class="exp-body item2">arg</span>) {
 														</div>
 														<ol>
 															<li class="comment-block">
@@ -430,7 +430,7 @@
 															}
 														</div>
 														<div class="code-body">
-															}
+															};
 														</div>
 													</li>
 												</ol>
@@ -460,7 +460,7 @@
 										x = <span class="exp-body item1">150</span>;
 									</div>
 									<div class="code-body">
-										turtle.x = <span class="exp-body item1">150</span>;
+										TURTLE.x = <span class="exp-body item1">150</span>;
 									</div>
 								</li>
 								<li class="turtle-block">
@@ -468,7 +468,7 @@
 										y = <span class="exp-body item1">150</span>;
 									</div>
 									<div class="code-body">
-										turtle.y = <span class="exp-body item1">150</span>;
+										TURTLE.y = <span class="exp-body item1">150</span>;
 									</div>
 								</li>
 								<li class="turtle-block">
@@ -476,7 +476,7 @@
 										penDown = <span class="exp-body item1">true</span>;
 									</div>
 									<div class="code-body">
-										turtle.penDown = <span class="exp-body item1">true</span>;
+										TURTLE.penDown = <span class="exp-body item1">true</span>;
 									</div>
 								</li>
 								<li class="turtle-block">
@@ -484,7 +484,7 @@
 										penColor = <span class="exp-body item1">blue</span>;
 									</div>
 									<div class="code-body">
-										turtle.penColor = color.<span class="exp-body item1">blue</span>;
+										TURTLE.penColor = TURTLE.color.<span class="exp-body item1">blue</span>;
 									</div>
 								</li>
 								<li class="comment-block">
@@ -532,7 +532,7 @@
 												forward(<span class="exp-body item1">length</span>);
 											</div>
 											<div class="code-body">
-												turtle.forward(<span class="exp-body item1">length</span>);
+												TURTLE.forward(<span class="exp-body item1">length</span>);
 											</div>
 										</li>
 										<li class="var-block">
@@ -548,7 +548,7 @@
 												left(<span class="exp-body item1">60</span>);
 											</div>
 											<div class="code-body">
-												turtle.left(<span class="exp-body item1">60</span>);
+												TURTLE.left(<span class="exp-body item1">60</span>);
 											</div>
 										</li>
 									</ol>
