@@ -170,6 +170,12 @@ a.trash:hover {
 	color: White;
 }
 
+/* Blank Line */
+.blank-block {
+	background-color: White;
+	color: lightgrey;
+}
+
 /* code body visibility*/
 .code-body {
 	display: none;
