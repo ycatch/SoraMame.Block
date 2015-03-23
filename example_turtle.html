@@ -7,7 +7,7 @@
 		<meta name="description" content="This is very small block-type code editor ">
 		<meta name="author" content="Yutaka Kachi">
 		<link rel="icon" href="lib/img/favicon.ico">
-		<title>Example - SoraMame Block Editor</title>
+		<title>Example - SoraMame Block</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="lib/css/bootstrap.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="https://github.com/ycatch/SoraMame.Block">SoraMame Block</a>
+					<a class="navbar-brand" href="https://github.com/ycatch/SoraMame.Block">Turtle Block</a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
@@ -55,6 +55,11 @@
 							<a href="javascript:void(0)" onclick="SORAMAME_BLOCK.execCodeBlock(); return false;">
 								<i class="glyphicon glyphicon-play"></i>Run
 							</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#helpModalDialog" data-toggle="modal">Help</a>
 						</li>
 					</ul>
 				</div>
@@ -151,6 +156,14 @@
 														</div>
 														<div class="code-body">
 															TURTLE.penColor = TURTLE.color.<span class="exp-body item1">red</span>;
+														</div>
+													</li>
+													<li class="turtle-block">
+														<div class="block-body">
+															clear();
+														</div>
+														<div class="code-body">
+															TURTLE.clear();
 														</div>
 													</li>
 												</ol>
@@ -666,6 +679,38 @@
 						<div class="modal-footer">
 							<button type="button" class="btn btn-primary" id="btn_ok_expModalDialog">OK</button>
 							<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /.modal -->
+			<!-- Help dialog by Bootstrap3 Modals -->
+			<div id="helpModalDialog" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Help - SoraMame.Block</h4>
+						</div>
+						<div class="modal-body">
+							<p>SoraMame.Block is block-type code editor for tiny script.</p>
+							<h5>How to use</h5>
+							<p>Block Tab</p>
+								<ul>
+									<li>Move Block: Drag and Drop block.</li>
+									<li>Edit Expression: Click expression </li>
+									<li>Clear Trash-Can: Double-Click trash</li>
+								</ul>
+							<p>Code Tab: View code.</p>
+							<p>Run Tab: Execute code.</p>
+							<h5>Reference</h5>
+							<ul>
+								<li><a href="https://github.com/ycatch/SoraMame.Block" target="_blank">Github</a></li>
+								<li><a href="http://www.catch.jp/wiki/index.php?SoraMame.Block" target="_blank">Japanese Documents - 日本語ドキュメント</a></li>
+							</ul>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
 						</div>
 					</div>
 				</div>
