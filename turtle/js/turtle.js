@@ -93,7 +93,12 @@
 		return this.angleInRadians * 180.0 / Math.PI;
 	};
 	
-	/** add Single Global var. */
+	turtle.clear = function () {
+		// clear CANVAS
+		this.ct.clearRect(0, 0, canvas.width, canvas.height);
+	};
+	
+	/** add Global Single var. */
 	if (typeof window.TURTLE == "undefined") {
 		window.TURTLE = turtle;
 	}
