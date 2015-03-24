@@ -20,7 +20,9 @@
 	};
 
 	turtle.color = {
-		black: "#ffffff",
+		black: "#000000",
+		gray: "#808080",
+		lightgray: "#C0C0C0",
 		red: "#ff0000",
 		green: "#00ff00",
 		blue: "#0000ff",
@@ -96,6 +98,28 @@
 	turtle.clear = function () {
 		// clear CANVAS
 		this.ct.clearRect(0, 0, canvas.width, canvas.height);
+	};
+	
+	turtle.mark = function () {
+		// drawing turtle symbol.
+		var path = 5;
+		var angle2 = this.angleInRadians + Math.PI / 3;
+		var angle3 = this.angleInRadians - Math.PI / 3;
+		var x0 = this.x,
+			y0 = this.y,
+			x1 = x0 + path * 1.5 * Math.sin(this.angleInRadians),
+			y1 = y0 + path * 1.5 * Math.cos(this.angleInRadians);
+		
+		this.ct.fillStyle = turtle.color.gray;
+		this.ct.beginPath();
+		this.ct.arc(x0, y0, path, 0, Math.PI*2, true);
+		this.ct.fill();
+		
+		this.ct.strokeStyle = turtle.color.lightgray;
+ 		this.ct.beginPath();
+		this.ct.moveTo(x0, y0);
+		this.ct.lineTo(x1, y1);
+		this.ct.stroke();
 	};
 	
 	/** add Global Single var. */
