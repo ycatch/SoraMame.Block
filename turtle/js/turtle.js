@@ -43,7 +43,12 @@
 
 
 	turtle.logPenStatus = function () {
-		console.log('x=' + this.x + "; y=" + this.y + '; angle = ' + this.angle + '; penDown = ' + this.penDown);
+		console.log(
+			'x=' + this.x + 
+			'; y=' + this.y + 
+			'; angle=' + this.angle() + 
+			'; penColor = ' + this.penColor +
+			'; penDown=' + this.penDown);
 	};
 
 
