@@ -103,8 +103,7 @@
 	turtle.mark = function () {
 		// drawing turtle symbol.
 		var path = 5;
-		var angle2 = this.angleInRadians + Math.PI / 3;
-		var angle3 = this.angleInRadians - Math.PI / 3;
+
 		var x0 = this.x,
 			y0 = this.y,
 			x1 = x0 + path * 1.5 * Math.sin(this.angleInRadians),
