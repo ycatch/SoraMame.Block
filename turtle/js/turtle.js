@@ -95,6 +95,11 @@
 		return this.angleInRadians * 180.0 / Math.PI;
 	};
 	
+	turtle.setAngle = function (angle) {
+		// set angle by degrees 0 - 360
+		this.angleInRadians = angle * Math.PI / 180.0;
+	};
+	
 	turtle.clear = function () {
 		// clear CANVAS
 		this.ct.clearRect(0, 0, canvas.width, canvas.height);
