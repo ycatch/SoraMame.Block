@@ -1,0 +1,25 @@
+﻿
+		<!-- Game JavaScript ================================================== -->
+		<!-- Load the Phaser library -->
+		<script src="game/js/phaser.min.js"></script>
+		<!-- Load Game code -->
+		<script src="game/js/Boot.js"></script>
+		<script src="game/js/Preloader.js"></script>
+		<script src="game/js/MainMenu.js"></script>
+		<script src="game/js/Game.js"></script>
+		<script type="text/javascript">
+			(function () {
+
+				var game = new Phaser.Game(294, 294, Phaser.AUTO, 'game');
+
+				// Add the game States; could be done in Boot but just as easy here
+				game.state.add('Boot', BasicGame.Boot);
+				game.state.add('Preloader', BasicGame.Preloader);
+				game.state.add('MainMenu', BasicGame.MainMenu);
+				game.state.add('Game', BasicGame.Game);
+
+				// Now start the Boot state.
+				game.state.start('Boot');
+
+			})();
+		</script>

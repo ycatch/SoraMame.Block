@@ -1,0 +1,37 @@
+﻿
+	</head>
+	<body>
+		<!-- Start Static navbar -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="https://github.com/ycatch/SoraMame.Block">SoraMame Block</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="#menu1" data-toggle="tab">Block</a>
+						</li>
+						<li onclick="SORAMAME_BLOCK.setSerializeBlock()">
+							<a href="#menu2" data-toggle="tab">Code</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" onclick="SORAMAME_BLOCK.execCodeBlock(); return false;">
+								<span class="glyphicon glyphicon-play"></span> Run
+							</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#helpModalDialog" data-toggle="modal">Help</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav> <!-- End Static navbar -->
