@@ -16,8 +16,8 @@
 .block li {
 	cursor: move;
 	list-style: none;
-	margin: 8px 8px 8px 8px;
-	padding: 0px 4px 4px 4px;
+	margin: 4px 4px 4px 4px;
+	padding: 2px 4px 4px 4px;
 	font-size: 12px;
 	font-weight: bold;
  	line-height: 1.4;
@@ -31,8 +31,8 @@
 }
 
 .block li:hover{
-	margin: 6px 8px 6px 8px; /* for float effect*/
-	padding: 0px 2px 6px 4px; /* for float effect*/
+	margin: 3px 4px 5px 4px; /* for float effect*/
+	padding: 2px 4px 4px 4px; /* for float effect*/
 	font-weight: bold;
 	box-shadow: 2px 2px 2px 2px gray;
     -webkit-box-shadow: 2px 2px 2px 2px gray;
@@ -73,7 +73,7 @@
 /* Editable expression area*/
 span.exp-body {
 	cursor: text;
-	margin: 0px;
+	margin: 2px;
 	padding: 0em 0.2em;
 	background-color: white;
 	color: black;
