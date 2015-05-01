@@ -1,2 +1,2 @@
 cd html_parts
-type head_common.html head_title_game.html head_links_common.html body_navbar_game.html body_pallette_game.html body_mainEditArea_game.html body_common_trashArea.html body_common_codeView.html body_common_expEditor.html body_common_help.html footer_game.html footer_common.html> ../../example_game.html
+type head_common.html head_title_game.html head_links_common.html body_navbar_game.html body_pallette_game.html body_mainEditArea_game.html body_common_trashArea.html body_common_codeView.html body_common_expEditor.html body_common_help.html footer_game.html footer_common.html > ../../example_game.html
