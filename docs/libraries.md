@@ -3,7 +3,7 @@ Libraries
 
 ## jquery-sortable
 
-v0.9.4
+v0.9.4 -> 0.9.13
 
 This is nested sortable most important parts of SoraMame.
 
