@@ -25,10 +25,8 @@ Demo
 
 * Mini Game
   - http://www.catch.jp/program/soramame_block/example_game.html
-
 * FizzBuzz
   - http://www.catch.jp/program/soramame_block/
-
 * Turtle Language
   - http://www.catch.jp/program/soramame_block/example_turtle.html
 
@@ -46,12 +44,13 @@ Development_guide
 Relational Projects and Libraries
 -----------------------------------
 
-* jquery-sortable
-  - http://johnny.github.io/jquery-sortable/
+* MameBlock.js - Javascript library for visual code editing.
+  - http://ycatch.github.io/mameblock.js/
 * games-phaser-getaway
   - https://github.com/ycatch/games-phaser-getaway
 * Libraries
   - https://github.com/ycatch/SoraMame.Block/blob/master/docs/libraries.md
-
+* jquery-sortable
+  - http://johnny.github.io/jquery-sortable/
 
 
