@@ -14,7 +14,7 @@ This project is now working in progress.
 License
 --------
 
-Copyright 2014-2015 Yutaka Kachi released under MIT License.
+Copyright 2014-2016 Yutaka Kachi released under MIT License.
 
 see LICENSE file or http://opensource.org/licenses/MIT
 
@@ -52,5 +52,3 @@ Relational Projects and Libraries
   - https://github.com/ycatch/SoraMame.Block/blob/master/docs/libraries.md
 * jquery-sortable
   - http://johnny.github.io/jquery-sortable/
-
-
